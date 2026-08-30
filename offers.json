@@ -1,0 +1,209 @@
+[
+  {
+    "name": "Supreme Uppercrust",
+    "type": "restaurant",
+    "rating": "4.4",
+    "reviews": "2,026",
+    "offer": "10% OFF",
+    "tag": "FINE DINING",
+    "img": "restaurant.svg"
+  },
+  {
+    "name": "SULAIMANI LAND'S END",
+    "type": "restaurant",
+    "rating": "4.6",
+    "reviews": "658",
+    "offer": "5% OFF",
+    "tag": "SEA VIEW DINING",
+    "img": "sea.svg"
+  },
+  {
+    "name": "Le Delice",
+    "type": "restaurant",
+    "rating": "4.2",
+    "reviews": "1,556",
+    "offer": "10% OFF",
+    "tag": "LOCAL FAVOURITE",
+    "img": "restaurant.svg"
+  },
+  {
+    "name": "Meen by Chef Pillai",
+    "type": "restaurant",
+    "rating": "4.2",
+    "reviews": "1,155",
+    "offer": "5% OFF",
+    "tag": "KERALA CUISINE",
+    "img": "restaurant.svg"
+  },
+  {
+    "name": "Ramees Restaurant",
+    "type": "restaurant",
+    "rating": "4.2",
+    "reviews": "11,575",
+    "offer": "10% OFF",
+    "tag": "SOUTH INDIAN",
+    "img": "restaurant.svg"
+  },
+  {
+    "name": "The Leela Ashtamudi",
+    "type": "hotel",
+    "rating": "4.4",
+    "reviews": "7,500",
+    "offer": "10% OFF",
+    "tag": "BACKWATER LUXURY",
+    "img": "hotel.svg"
+  },
+  {
+    "name": "The Quilon Beach Hotel",
+    "type": "hotel",
+    "rating": "4.2",
+    "reviews": "5,719",
+    "offer": "5% OFF",
+    "tag": "BEACHSIDE STAY",
+    "img": "sea.svg"
+  },
+  {
+    "name": "Dfort Hotel Kollam",
+    "type": "hotel",
+    "rating": "4.4",
+    "reviews": "2,678",
+    "offer": "10% OFF",
+    "tag": "CITY STAY",
+    "img": "hotel.svg"
+  },
+  {
+    "name": "Club Mahindra Ashtamudi",
+    "type": "hotel",
+    "rating": "4.3",
+    "reviews": "6,578",
+    "offer": "5% OFF",
+    "tag": "LAKE RESORT",
+    "img": "sea.svg"
+  },
+  {
+    "name": "Samiira on Ashtamudi Lake",
+    "type": "hotel",
+    "rating": "4.3",
+    "reviews": "327",
+    "offer": "10% OFF",
+    "tag": "LAKESIDE ESCAPE",
+    "img": "sea.svg"
+  },
+  {
+    "name": "Jolly Silks - Kollam",
+    "type": "shops",
+    "rating": "4.7",
+    "reviews": "14,663",
+    "offer": "15% OFF",
+    "tag": "FASHION",
+    "img": "fashion.svg"
+  },
+  {
+    "name": "Pulimoottil Silks",
+    "type": "shops",
+    "rating": "4.5",
+    "reviews": "10,536",
+    "offer": "15% OFF",
+    "tag": "SILKS & ETHNIC WEAR",
+    "img": "fashion.svg"
+  },
+  {
+    "name": "Style Union - Kollam",
+    "type": "shops",
+    "rating": "4.8",
+    "reviews": "8,448",
+    "offer": "15% OFF",
+    "tag": "FASHION",
+    "img": "fashion.svg"
+  },
+  {
+    "name": "Fashion Factory",
+    "type": "shops",
+    "rating": "4.6",
+    "reviews": "1,786",
+    "offer": "15% OFF",
+    "tag": "FAMILY FASHION",
+    "img": "fashion.svg"
+  },
+  {
+    "name": "Blossom Exclusive Store Kollam",
+    "type": "shops",
+    "rating": "4.9",
+    "reviews": "1,160",
+    "offer": "15% OFF",
+    "tag": "WOMEN'S FASHION",
+    "img": "fashion.svg"
+  },
+  {
+    "name": "Syzygy Ecosports",
+    "type": "others",
+    "rating": "4.8",
+    "reviews": "470",
+    "offer": "10% OFF",
+    "tag": "KAYAKING",
+    "img": "kayak.svg"
+  },
+  {
+    "name": "Kayabay Adventure",
+    "type": "others",
+    "rating": "4.9",
+    "reviews": "346",
+    "offer": "10% OFF",
+    "tag": "KAYAKING",
+    "img": "kayak.svg"
+  },
+  {
+    "name": "Mangrove Dreams Adventure Water Sports",
+    "type": "others",
+    "rating": "4.9",
+    "reviews": "2,235",
+    "offer": "10% OFF",
+    "tag": "WATER SPORTS",
+    "img": "kayak.svg"
+  },
+  {
+    "name": "Mangrove Wonders Kayaking",
+    "type": "others",
+    "rating": "4.9",
+    "reviews": "1,283",
+    "offer": "10% OFF",
+    "tag": "KAYAKING",
+    "img": "kayak.svg"
+  },
+  {
+    "name": "Kollam Dream House Boat",
+    "type": "others",
+    "rating": "4.9",
+    "reviews": "999",
+    "offer": "10% OFF",
+    "tag": "HOUSEBOAT",
+    "img": "boat.svg"
+  },
+  {
+    "name": "Dream Cruise Houseboats",
+    "type": "others",
+    "rating": "4.9",
+    "reviews": "147",
+    "offer": "10% OFF",
+    "tag": "HOUSEBOAT",
+    "img": "boat.svg"
+  },
+  {
+    "name": "Kollam Houseboats Ashtamudi Lake Tours",
+    "type": "others",
+    "rating": "4.6",
+    "reviews": "327",
+    "offer": "10% OFF",
+    "tag": "BOAT TOUR",
+    "img": "boat.svg"
+  },
+  {
+    "name": "Adventure Park, Kollam",
+    "type": "others",
+    "rating": "4.1",
+    "reviews": "7,851",
+    "offer": "10% OFF",
+    "tag": "ADVENTURE",
+    "img": "adventure.svg"
+  }
+]

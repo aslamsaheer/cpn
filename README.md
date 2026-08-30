@@ -1,14 +1,16 @@
-# coupon4u — Kollam premium demo
+# coupon4u fixed mobile demo
 
-Updated categories:
-- Restaurant: demo 5% / 10% offers
-- Hotel: demo 5% / 10% offers
-- Shops: 15% demo offers
-- Others: 10% demo offers for kayaking, boating, houseboats and adventure
+Fixes:
+- All images are bundled locally as SVG assets, so GitHub Pages won't fail due to hotlinking/CORS/remote-image issues.
+- Saved navigation works and persists in localStorage.
+- My Offers works and stores claimed offers + unique redemption IDs in localStorage.
+- More menu works.
+- Bottom navigation works.
+- Search works.
+- Category filters work.
+- Save button works.
+- Claim Offer -> My Offers flow works.
+- Premium deck/card design retained.
+- 5/10% restaurant/hotel demos, 15% shops, 10% activities.
 
-The business names and Google rating/review counts are based on current local-business search results from Aug 30, 2026. The discount offers are DEMO ONLY and do not imply authorization by those businesses.
-
-Kollam activity examples were selected from current local/business and Kerala Tourism information. Kerala Tourism confirms kayaking, boating and water sports around Ashtamudi/Ashramam; the State Water Transport Department also lists the See Ashtamudi tourist boat service.
-
-This version intentionally uses premium category visuals rather than copying third-party business photos. Replace the visual assets with licensed/approved venue photos after a business joins coupon4u.
-"# cpn" 
+The offers are demo listings; discounts are not claims of business authorization.
