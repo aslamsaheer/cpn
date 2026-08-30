@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 650">
+    <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#4c2b1b"/><stop offset="1" stop-color="#111"/></linearGradient></defs>
+    <rect width="900" height="650" fill="url(#g)"/>
+    <circle cx="720" cy="120" r="170" fill="#d8a45d" opacity=".22"/>
+    <circle cx="160" cy="560" r="230" fill="#d8a45d" opacity=".12"/>
+    <text x="450" y="315" text-anchor="middle" fill="white" font-size="150">🍛</text>
+    <text x="450" y="520" text-anchor="middle" fill="white" font-family="Arial" font-size="34" font-weight="700" letter-spacing="3">KOLLAM DINING</text>
+    </svg>
