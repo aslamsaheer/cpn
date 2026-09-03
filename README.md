@@ -1,4 +1,4 @@
-# coupon4u v0.8.9 — Premium Ticket Voucher UI
+# coupon4u v0.9.1 — Premium Ticket Voucher UI
 
 A mobile-first coupon marketplace redesign based on the supplied visual reference.
 
@@ -10,7 +10,7 @@ A mobile-first coupon marketplace redesign based on the supplied visual referenc
 - Existing Kollam restaurant/hotel/shop/activity catalog retained
 - No external merchant image URLs
 - LocalStorage for saved and claimed offers
-- Version shown as v0.8.9
+- Version shown as v0.9.1
 
 Open `index.html` in a browser. For fetch() to load `offers.json`, use a small local web server rather than `file://`.
 
@@ -35,3 +35,10 @@ You can replace `cover.jpg` with a PNG only if you also update that merchant's
 ## Ratings
 Merchant ratings are displayed as a compact star badge on the voucher artwork.
 The catalog stores the rating and review count with `ratingSource: Google`.
+
+
+## v0.9.1 asset cleanup
+
+Removed the old generic SVG artwork (`adventure.svg`, `boat.svg`, `fashion.svg`,
+`hotel.svg`, `kayak.svg`, `restaurant.svg`, `sea.svg`). Merchant folders under
+`assets/merchants/` remain the only source for merchant card images.

@@ -19,6 +19,17 @@ function initials(name){return name.split(/[\s&-]+/).filter(Boolean).slice(0,2).
 function palette(type){
   return type==="restaurant" ? "wine" : type==="hotel" ? "navy" : type==="shops" ? "violet" : "teal";
 }
+function fallbackImage(type){
+  return type==="restaurant" ? "assets/restaurant.svg" :
+    type==="hotel" ? "assets/hotel.svg" :
+    type==="shops" ? "assets/fashion.svg" :
+    "assets/adventure.svg";
+}
+function imageMarkup(x, cls="merchant-image"){
+  const src=x.image||fallbackImage(x.type);
+  const fallback=fallbackImage(x.type);
+  return `<img class="${cls}" src="${src}" alt="${x.name}" onerror="if(this.dataset.fallback!=='1'){this.dataset.fallback='1';this.src='${fallback}';}else{this.style.display='none';this.parentElement.classList.add('no-image')}" />`;
+}
 function voucherMarkup(x, index, large=false){
   const pct=x.offer.replace(" OFF","").replace("%","");
   const code="C4U-"+x.name.replace(/[^A-Z0-9]+/gi,"").slice(0,7).toUpperCase()+pct.replace("%","");
@@ -26,7 +37,7 @@ function voucherMarkup(x, index, large=false){
   const cls=large?"voucher-card large":"voucher-card";
   return `<article class="${cls} ${p}" onclick="openOffer(${index})">
     <div class="voucher-art">
-      <img class="merchant-image" src="${x.image}" alt="${x.name}" onerror="this.style.display='none';this.parentElement.classList.add('no-image')">
+      ${imageMarkup(x)}
       <div class="art-glow"></div><div class="art-orbit"></div>
       <div class="merchant-symbol">${initials(x.name)}</div>
       <div class="merchant-copy"><b>${x.name}</b><small>${x.tag}</small></div>
@@ -90,7 +101,7 @@ function moreCard(x){
   const code="C4U-"+x.name.replace(/[^A-Z0-9]+/gi,"").slice(0,7).toUpperCase()+pct;
   return `<button class="offer-mini-card ${palette(x.type)}" onclick="openOffer(${i})">
     <div class="mini-voucher-art">
-      <img src="${x.image}" alt="${x.name}" onerror="this.style.display='none';this.parentElement.classList.add('no-image')">
+      ${imageMarkup(x,"merchant-image")}
       <div class="mini-image-shade"></div>
       <span class="mini-rating">★ ${x.rating}</span>
       <div class="mini-merchant"><b>${x.name}</b><small>${x.tag}</small></div>
