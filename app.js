@@ -87,20 +87,24 @@ function mini(x){
 function moreCard(x){
   const i=offers.indexOf(x);
   const pct=x.offer.replace(" OFF","").replace("%","");
-  const p=palette(x.type);
-  return `<button class="offer-mini-card ${p}" onclick="openOffer(${i})">
-    <div class="mini-art">
+  const code="C4U-"+x.name.replace(/[^A-Z0-9]+/gi,"").slice(0,7).toUpperCase()+pct;
+  return `<button class="offer-mini-card ${palette(x.type)}" onclick="openOffer(${i})">
+    <div class="mini-voucher-art">
       <img src="${x.image}" alt="${x.name}" onerror="this.style.display='none';this.parentElement.classList.add('no-image')">
-      <span>${initials(x.name)}</span>
-      <small>${typeLabel[x.type]}</small>
-      <em class="mini-rating">★ ${x.rating}</em>
+      <div class="mini-image-shade"></div>
+      <span class="mini-rating">★ ${x.rating}</span>
+      <div class="mini-merchant"><b>${x.name}</b><small>${x.tag}</small></div>
     </div>
-    <div class="mini-card-body">
-      <b>${x.name}</b>
-      <span>${x.tag}</span>
-      <strong>${pct}% <small>OFF</small></strong>
+    <div class="mini-paper">
+      <div class="mini-perforation"></div>
+      <div class="mini-offer-label">COUPON4U EXCLUSIVE</div>
+      <strong>${pct}% OFF</strong>
+      <span>${x.type==="hotel"?"ON ROOM BOOKING":"YOUR BILL"}</span>
+      <div class="mini-code">${code} <i>▢</i></div>
+      <div class="mini-barcode"></div>
     </div>
-    <div class="mini-card-footer"><span>VIEW OFFER</span><b>→</b></div>
+    <div class="mini-redeem"><span>Redeem Now</span><b>→</b></div>
+    <div class="mini-notches"><i></i><i></i><i></i></div>
   </button>`;
 }
 function renderHome(){

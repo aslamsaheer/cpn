@@ -309,3 +309,187 @@
   border-radius:7px;
   backdrop-filter:blur(7px);
 }
+
+/* v0.8.8 — Mini cards now use the same ticket design as Top Picks */
+.mini-list{padding:0 18px 100px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+.offer-mini-card{min-width:0;height:314px;padding:0;border:1px solid #c8c0b0;background:var(--paper);color:var(--ink);border-radius:16px;overflow:hidden;position:relative;text-align:left;cursor:pointer;box-shadow:0 12px 30px #0006}
+.mini-voucher-art{height:130px;position:relative;overflow:hidden;color:#fff;background:#17191e}
+.mini-voucher-art>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;display:block;transform:none}
+.mini-image-shade{position:absolute;inset:0;background:linear-gradient(180deg,#0001 25%,#000a 100%)}
+.mini-merchant{position:absolute;left:11px;right:8px;bottom:10px;z-index:3}
+.mini-merchant b{display:block;font-family:"Playfair Display",serif;font-size:13px;line-height:1.02;max-width:85%;text-shadow:0 2px 10px #000}
+.mini-merchant small{display:block;margin-top:4px;color:#ddd;font-size:6px;letter-spacing:.9px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mini-voucher-art .mini-rating{position:absolute;z-index:4;right:8px;top:8px;font-style:normal;font-size:7px;font-weight:700;color:#fff;background:#08090bd9;border:1px solid #ffffff35;padding:4px 5px;border-radius:6px;backdrop-filter:blur(7px)}
+.mini-paper{height:130px;position:relative;background:var(--paper);padding:15px 11px 7px}
+.mini-perforation{position:absolute;left:0;right:0;top:-1px;height:9px;background:linear-gradient(135deg,transparent 5px,var(--paper) 0) 0 0/10px 10px repeat-x;filter:drop-shadow(0 -1px 0 #bcb5a7)}
+.mini-offer-label{font-size:5px;letter-spacing:1px;color:#958d82}
+.mini-paper>strong{display:block;margin-top:5px;font-family:"Playfair Display",serif;font-size:24px;line-height:.9;letter-spacing:-.7px}
+.mini-paper>span{display:block;font-size:6px;font-weight:700;letter-spacing:.7px;margin-top:3px}
+.mini-code{display:inline-block;margin-top:8px;border:1px solid #b8afa2;border-radius:99px;padding:5px 7px;font-size:5.5px;letter-spacing:.4px;max-width:78%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mini-code i{font-style:normal;margin-left:4px}
+.mini-barcode{position:absolute;right:8px;top:39px;width:17px;height:55px;background:repeating-linear-gradient(90deg,#201f1c 0 1px,transparent 1px 3px,#201f1c 3px 4px,transparent 4px 5px);opacity:.7}
+.mini-redeem{height:54px;background:linear-gradient(90deg,#a9193d,#87102e);color:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 11px}
+.mini-redeem span{font-size:9px;font-weight:700}.mini-redeem b{font-size:18px;font-weight:400}
+.mini-notches{position:absolute;left:0;right:0;bottom:-5px;height:13px;display:flex;justify-content:space-around}
+.mini-notches i{width:12px;height:12px;background:var(--bg);border-radius:50%}
+.offer-mini-card.navy .mini-redeem{background:linear-gradient(90deg,#183451,#10253a)}
+.offer-mini-card.violet .mini-redeem{background:linear-gradient(90deg,#67319a,#48206e)}
+.offer-mini-card.teal .mini-redeem{background:linear-gradient(90deg,#147e68,#0d6252)}
+@media(max-width:350px){.mini-list{grid-template-columns:1fr}.offer-mini-card{height:330px}}
+
+/* v0.8.9 — Premium silver lottery-ticket voucher treatment */
+.voucher-card,
+.offer-mini-card{
+  border:0;
+  border-radius:0;
+  background:linear-gradient(135deg,#70747a 0%,#eef0f2 8%,#8b8f95 18%,#f5f6f7 31%,#74787e 47%,#dfe1e3 64%,#686c72 82%,#f0f1f2 94%,#777b80 100%);
+  padding:3px;
+  box-shadow:0 20px 55px #0009,0 0 0 1px #ffffff35;
+}
+.voucher-card::before,
+.offer-mini-card::before{
+  content:"";
+  position:absolute;
+  inset:3px;
+  pointer-events:none;
+  z-index:10;
+  border:1px solid #ffffff72;
+  box-shadow:inset 0 0 0 1px #575b60;
+}
+
+/* Deep ticket interior */
+.voucher-card .voucher-art,
+.voucher-card .voucher-paper,
+.voucher-card .redeem-bar{
+  position:relative;
+}
+.voucher-card .voucher-art{
+  margin:0;
+  height:202px;
+}
+.voucher-card .voucher-paper{
+  height:143px;
+}
+.voucher-card .redeem-bar{
+  height:57px;
+}
+
+/* Sharp side cutouts: alternating triangular ticket perforation */
+.voucher-card .voucher-art::before,
+.voucher-card .voucher-art::after,
+.offer-mini-card .mini-voucher-art::before,
+.offer-mini-card .mini-voucher-art::after{
+  content:"";
+  position:absolute;
+  top:50%;
+  width:13px;
+  height:13px;
+  background:var(--bg);
+  z-index:8;
+  transform:translateY(-50%) rotate(45deg);
+}
+.voucher-card .voucher-art::before,
+.offer-mini-card .mini-voucher-art::before{left:-9px}
+.voucher-card .voucher-art::after,
+.offer-mini-card .mini-voucher-art::after{right:-9px}
+
+.voucher-paper{
+  border-top:1px dashed #888b90;
+}
+
+/* Silver perforated transition between artwork and paper */
+.voucher-card .voucher-paper::before,
+.offer-mini-card .mini-paper::before{
+  content:"";
+  position:absolute;
+  left:5px;
+  right:5px;
+  top:-2px;
+  height:9px;
+  background:
+    linear-gradient(135deg,transparent 0 5px,#f5f1e8 5px 9px,transparent 9px) 0 0/12px 9px repeat-x;
+  filter:drop-shadow(0 -1px 0 #5d6065);
+  z-index:5;
+}
+
+/* Metallic vertical ticket rails */
+.voucher-card .voucher-art,
+.offer-mini-card .mini-voucher-art{
+  box-shadow:inset 3px 0 0 #ffffff55,inset -3px 0 0 #4d5157;
+}
+
+/* Security-print pattern */
+.voucher-card .voucher-paper::after,
+.offer-mini-card .mini-paper::after{
+  content:"C4U  •  C4U  •  C4U  •  C4U  •  C4U";
+  position:absolute;
+  left:10px;
+  right:10px;
+  bottom:7px;
+  font-size:4px;
+  letter-spacing:2px;
+  color:#9a958c;
+  opacity:.42;
+  white-space:nowrap;
+  overflow:hidden;
+}
+
+/* Silver top and bottom edge details */
+.voucher-card .redeem-bar{
+  border-top:1px solid #f6f7f8aa;
+  box-shadow:inset 0 2px 0 #4b4f55;
+}
+.voucher-card .ticket-notches{
+  bottom:-3px;
+}
+.voucher-card .ticket-notches i{
+  background:var(--bg);
+  box-shadow:0 0 0 1px #666a70;
+}
+
+/* Mini cards: same lottery-ticket construction, scaled */
+.offer-mini-card{
+  height:318px;
+}
+.offer-mini-card .mini-voucher-art{
+  height:130px;
+}
+.offer-mini-card .mini-paper{
+  height:131px;
+}
+.offer-mini-card .mini-redeem{
+  height:54px;
+  position:relative;
+  z-index:2;
+  border-top:1px solid #f7f7f788;
+}
+.offer-mini-card .mini-notches{
+  bottom:-4px;
+}
+.offer-mini-card .mini-notches i{
+  box-shadow:0 0 0 1px #666a70;
+}
+
+/* Premium silver corner serial */
+.voucher-card .art-corner{
+  letter-spacing:1.7px;
+  text-shadow:0 1px 2px #000;
+}
+.voucher-card .rating-badge{
+  border-color:#e9ebee88;
+  box-shadow:0 2px 10px #0005;
+}
+
+/* Small metallic serial line */
+.voucher-card .voucher-content::after{
+  content:"AUTHENTIC · ONE TIME · C4U";
+  position:absolute;
+  left:22px;
+  bottom:-2px;
+  font-size:5px;
+  letter-spacing:1.2px;
+  color:#9b968e;
+}
+@media(max-width:350px){
+  .offer-mini-card{height:334px}
+}
