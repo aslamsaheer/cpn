@@ -270,3 +270,9 @@
     padding:14px;
   }
 }
+
+
+/* v0.8.6 — live top-picks carousel indicators */
+.deck-dots{display:flex;justify-content:center;align-items:center;gap:7px}
+.deck-dots button{width:6px;height:6px;padding:0;border:0;border-radius:99px;background:#4c4f57;cursor:pointer;transition:width .22s ease,background .22s ease}
+.deck-dots button.active{width:18px;background:#e24967}

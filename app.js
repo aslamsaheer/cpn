@@ -105,8 +105,12 @@ function renderHome(){
   let list=filterType==="all"?offers:offers.filter(x=>x.type===filterType);
   const top=list.slice(0,6);
   $("deck").innerHTML=top.map((x)=>voucherMarkup(x,offers.indexOf(x))).join("");
-  $("dots").innerHTML=top.map((_,i)=>`<i class="${i===0?"active":""}"></i>`).join("");
+  $("dots").innerHTML=top.map((_,i)=>`<button class="${i===0?"active":""}" aria-label="Go to offer ${i+1}" onclick="event.stopPropagation();goToTopPick(${i})"></button>`).join("");
   $("mini").innerHTML=list.slice(6).map(moreCard).join("") || `<div class="empty">No offers found.</div>`;
+}
+function goToTopPick(i){
+  const cards=[...$("deck").querySelectorAll(".voucher-card")];
+  if(cards[i]) $("deck").scrollTo({left:cards[i].offsetLeft-24,behavior:"smooth"});
 }
 function filter(type,b){
   filterType=type;
@@ -137,6 +141,26 @@ function setup(){
   });
   $("save").onclick=toggleSave;
   $("search").addEventListener("input",search);
+
+  let deckTicking=false;
+  $("deck").addEventListener("scroll",()=>{
+    if(deckTicking) return;
+    deckTicking=true;
+    requestAnimationFrame(()=>{
+      const cards=[...$("deck").querySelectorAll(".voucher-card")];
+      if(cards.length){
+        const center=$("deck").scrollLeft+$("deck").clientWidth/2;
+        let active=0,best=Infinity;
+        cards.forEach((card,i)=>{
+          const d=Math.abs((card.offsetLeft+card.offsetWidth/2)-center);
+          if(d<best){best=d;active=i}
+        });
+        [...$("dots").children].forEach((dot,i)=>dot.classList.toggle("active",i===active));
+      }
+      deckTicking=false;
+    });
+  },{passive:true});
+
   $("seeAll").onclick=()=>{filterType="all";document.querySelectorAll(".categories button").forEach((b,i)=>b.classList.toggle("active",i===0));renderHome();document.querySelector(".more-head").scrollIntoView({behavior:"smooth"})};
   $("seeAll2").onclick=()=>window.scrollTo({top:document.body.scrollHeight,behavior:"smooth"});
 }

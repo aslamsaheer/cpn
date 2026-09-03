@@ -1,4 +1,4 @@
-# coupon4u v0.8.5 — Premium Ticket Voucher UI
+# coupon4u v0.8.6 — Premium Ticket Voucher UI
 
 A mobile-first coupon marketplace redesign based on the supplied visual reference.
 
@@ -10,7 +10,7 @@ A mobile-first coupon marketplace redesign based on the supplied visual referenc
 - Existing Kollam restaurant/hotel/shop/activity catalog retained
 - No external merchant image URLs
 - LocalStorage for saved and claimed offers
-- Version shown as v0.8.5
+- Version shown as v0.8.6
 
 Open `index.html` in a browser. For fetch() to load `offers.json`, use a small local web server rather than `file://`.
 
