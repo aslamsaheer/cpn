@@ -231,3 +231,42 @@
   .login-divider{margin:11px 0}
   .login-note{padding:12px 0 18px}
 }
+
+/* v0.8.5 — compact mobile login hero */
+.login-hero{
+  padding:20px 25px 14px;
+  min-height:205px;
+}
+.login-hero h1{
+  margin:35px 0 11px;
+  font-size:43px;
+}
+.login-hero p{
+  margin:0;
+  max-width:290px;
+}
+.login-hero .kerala-lineart{
+  display:none;
+}
+@media(max-width:520px){
+  .login-hero{
+    min-height:205px;
+    padding:13px 25px 10px;
+  }
+  .login-hero h1{
+    margin:28px 0 9px;
+    font-size:40px;
+    letter-spacing:-2px;
+  }
+  .login-hero p{
+    font-size:10px;
+  }
+  .offer-ticker{
+    margin-bottom:12px;
+    height:38px;
+  }
+  .login-card{
+    margin:0 18px;
+    padding:14px;
+  }
+}
