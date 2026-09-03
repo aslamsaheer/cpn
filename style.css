@@ -276,3 +276,36 @@
 .deck-dots{display:flex;justify-content:center;align-items:center;gap:7px}
 .deck-dots button{width:6px;height:6px;padding:0;border:0;border-radius:99px;background:#4c4f57;cursor:pointer;transition:width .22s ease,background .22s ease}
 .deck-dots button.active{width:18px;background:#e24967}
+
+/* v0.8.7 — Google rating badges */
+.rating-badge{
+  position:absolute;
+  z-index:4;
+  right:14px;
+  top:14px;
+  padding:6px 8px;
+  border-radius:9px;
+  background:rgba(8,9,10,.82);
+  border:1px solid rgba(255,255,255,.2);
+  color:#fff;
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:.2px;
+  backdrop-filter:blur(8px);
+}
+.rating-badge::first-letter{color:#f4c542}
+.mini-rating{
+  position:absolute;
+  z-index:3;
+  right:9px;
+  bottom:8px;
+  font-style:normal;
+  font-size:7px;
+  font-weight:700;
+  color:#fff;
+  background:rgba(8,9,10,.82);
+  border:1px solid rgba(255,255,255,.18);
+  padding:4px 6px;
+  border-radius:7px;
+  backdrop-filter:blur(7px);
+}

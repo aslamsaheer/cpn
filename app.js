@@ -31,6 +31,7 @@ function voucherMarkup(x, index, large=false){
       <div class="merchant-symbol">${initials(x.name)}</div>
       <div class="merchant-copy"><b>${x.name}</b><small>${x.tag}</small></div>
       <span class="art-corner">KOLLAM</span>
+      <span class="rating-badge">★ ${x.rating}</span>
     </div>
     <div class="voucher-paper">
       <div class="perforation top"></div>
@@ -92,6 +93,7 @@ function moreCard(x){
       <img src="${x.image}" alt="${x.name}" onerror="this.style.display='none';this.parentElement.classList.add('no-image')">
       <span>${initials(x.name)}</span>
       <small>${typeLabel[x.type]}</small>
+      <em class="mini-rating">★ ${x.rating}</em>
     </div>
     <div class="mini-card-body">
       <b>${x.name}</b>
