@@ -3,23 +3,23 @@
     "name": "Supreme Uppercrust",
     "type": "restaurant",
     "rating": "4.4",
-    "reviews": "2,026",
+    "reviews": "1,899",
     "offer": "10% OFF",
     "tag": "FINE DINING",
     "img": "restaurant.svg",
     "imageUrl": "https://www.supremeuppercrust.com/assets/img/UpperCrust/Kulathoor/UC_Kul-8.webp",
-    "imageType": "real-business-or-activity-photo"
+    "imageStatus": "real-image-url-verified"
   },
   {
     "name": "SULAIMANI LAND'S END",
     "type": "restaurant",
-    "rating": "4.6",
-    "reviews": "658",
+    "rating": "4.3",
+    "reviews": "650",
     "offer": "5% OFF",
     "tag": "SEA VIEW DINING",
-    "img": "sea.svg",
+    "img": "restaurant.svg",
     "imageUrl": "https://img05.restaurantguru.com/r097-design-KADAYIL-LANDS-END-RESTAURANT.jpg",
-    "imageType": "real-business-or-activity-photo"
+    "imageStatus": "real-image-url-verified"
   },
   {
     "name": "Le Delice",
@@ -30,7 +30,7 @@
     "tag": "LOCAL FAVOURITE",
     "img": "restaurant.svg",
     "imageUrl": "https://b.zmtcdn.com/data/pictures/7/20119157/c8345a68c352b9bc768b34397f57050a.jpeg?crop=960%3A500%3B%2A%2C%2A&fit=around%7C960%3A500",
-    "imageType": "real-business-or-activity-photo"
+    "imageStatus": "real-image-url-verified"
   },
   {
     "name": "Meen by Chef Pillai",
@@ -41,7 +41,7 @@
     "tag": "KERALA CUISINE",
     "img": "restaurant.svg",
     "imageUrl": "https://cdn.placejoys.com/16265-oy-photo-1.jpg",
-    "imageType": "real-business-or-activity-photo"
+    "imageStatus": "real-image-url-verified"
   },
   {
     "name": "Ramees Restaurant",
@@ -52,7 +52,62 @@
     "tag": "SOUTH INDIAN",
     "img": "restaurant.svg",
     "imageUrl": "https://hblimg.mmtcdn.com/content/hubble/img/ttd_images/mmt/activities/m_Kollam_Ramees_restaurant_1_l_480_640.jpg",
-    "imageType": "real-business-or-activity-photo"
+    "imageStatus": "real-image-url-verified"
+  },
+  {
+    "name": "Javees Cinema Restaurant",
+    "type": "restaurant",
+    "rating": "4.7",
+    "reviews": "53",
+    "offer": "5% OFF",
+    "tag": "CINEMA DINING",
+    "img": "restaurant.svg",
+    "imageUrl": "https://images.mindtrip.ai/restaurants/abb9/b020/8a51/b924/5d66/e422/8134/77b8",
+    "imageStatus": "real-image-url-verified"
+  },
+  {
+    "name": "Chef Stop",
+    "type": "restaurant",
+    "rating": "4.0",
+    "reviews": "789",
+    "offer": "10% OFF",
+    "tag": "KERALA FUSION",
+    "img": "restaurant.svg",
+    "imageUrl": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/a8/d8/56/chef-stop.jpg?h=500&s=1&w=900",
+    "imageStatus": "real-image-url-verified"
+  },
+  {
+    "name": "Wok & Grill",
+    "type": "restaurant",
+    "rating": "4.0",
+    "reviews": "2,693",
+    "offer": "5% OFF",
+    "tag": "ASIAN DINING",
+    "img": "restaurant.svg",
+    "imageUrl": "https://b.zmtcdn.com/data/dish_photos/d69/8e7bdb41091f28c354ef8df52ab68d69.jpeg",
+    "imageStatus": "real-image-url-verified"
+  },
+  {
+    "name": "Black Gold Restaurant",
+    "type": "restaurant",
+    "rating": "4.3",
+    "reviews": "15",
+    "offer": "10% OFF",
+    "tag": "FINE DINING",
+    "img": "restaurant.svg",
+    "imageUrl": "https://qresorts.in/uploads/59991bf62b345_9R0A2015.jpg",
+    "imageStatus": "real-image-url-verified"
+  },
+  {
+    "name": "Sree Ayyappa Punjabi Food & Andhra Meals",
+    "type": "restaurant",
+    "rating": "4.4",
+    "reviews": "1,023",
+    "offer": "5% OFF",
+    "tag": "VEGETARIAN",
+    "img": "restaurant.svg",
+    "imageUrl": "https://img3.restaurantguru.com/w550/h367/rfe7-Sri-Sai-Restaurant-interior-2025-06.jpg",
+    "imageStatus": "real-image-url-verified"
   },
   {
     "name": "The Leela Ashtamudi",
@@ -63,7 +118,7 @@
     "tag": "BACKWATER LUXURY",
     "img": "hotel.svg",
     "imageUrl": "https://www.theleela.com/prod/content/assets/styles/tl_500_621_webp/public/2024-03/Exterior-shot.jpg?VersionId=qG_SSDNpJontQ_V_YrVGzyz10.BaS.x6&itok=D8W5-BDR",
-    "imageType": "real-business-or-activity-photo"
+    "imageStatus": "real-image-url-verified"
   },
   {
     "name": "The Quilon Beach Hotel",
@@ -72,9 +127,9 @@
     "reviews": "5,719",
     "offer": "5% OFF",
     "tag": "BEACHSIDE STAY",
-    "img": "sea.svg",
+    "img": "hotel.svg",
     "imageUrl": "https://www.qresorts.in/uploads/59991b6ebf9ef_01-01.jpg",
-    "imageType": "real-business-or-activity-photo"
+    "imageStatus": "real-image-url-verified"
   },
   {
     "name": "Dfort Hotel Kollam",
@@ -84,8 +139,8 @@
     "offer": "10% OFF",
     "tag": "CITY STAY",
     "img": "hotel.svg",
-    "imageUrl": "https://rukmini-ct.flixcart.com/w_2048%2Cf_auto%2Cq_auto/ct-hotel-images/places/hotels/cms/4341/4341699/images/image_4341699_e7be9bf5-89c4-44bc-a16b-9a97019d6884.jpeg",
-    "imageType": "real-business-or-activity-photo"
+    "imageUrl": "https://pix8.agoda.net/hotelImages/5315585/-1/ebfbd22c8f946165b52578f77ff4a59f.jpg?ca=0&ce=1&s=1024x768",
+    "imageStatus": "real-image-url-verified"
   },
   {
     "name": "Club Mahindra Ashtamudi",
@@ -94,9 +149,9 @@
     "reviews": "6,578",
     "offer": "5% OFF",
     "tag": "LAKE RESORT",
-    "img": "sea.svg",
-    "imageUrl": "https://pix8.agoda.net/hotelImages/572391/0/245bbdfb4a452887e4889d1916e3ae7b.jpg?ce=2&s=1024x768",
-    "imageType": "real-business-or-activity-photo"
+    "img": "hotel.svg",
+    "imageUrl": "https://pix8.agoda.net/hotelImages/572391/0/a61560749d5c2d910bb3d2aa5458b05f.jpg?ce=2&s=1024x768",
+    "imageStatus": "real-image-url-verified"
   },
   {
     "name": "Samiira on Ashtamudi Lake",
@@ -105,20 +160,75 @@
     "reviews": "327",
     "offer": "10% OFF",
     "tag": "LAKESIDE ESCAPE",
-    "img": "sea.svg",
-    "imageUrl": "https://pix10.agoda.net/hotelImages/31059128/0/d78b3b46bdd3d0fc99753dc05097250c.jpg?ca=28&ce=0&s=1024x768",
-    "imageType": "real-business-or-activity-photo"
+    "img": "hotel.svg",
+    "imageUrl": "https://assets.simplotel.com/simplotel/image/upload/w_5000%2Ch_3335/x_0%2Cy_1283%2Cw_5000%2Ch_2052%2Cr_0%2Cc_crop/q_80%2Cw_1600%2Cdpr_1%2Cf_auto%2Cfl_progressive%2Cc_limit/samiira-on-ashtamudi-lake-kollam/SAMIIRA_1_rd08vg",
+    "imageStatus": "real-image-url-verified"
+  },
+  {
+    "name": "WATERFRONT BY PALMYRA",
+    "type": "hotel",
+    "rating": "4.6",
+    "reviews": "429",
+    "offer": "5% OFF",
+    "tag": "LAKESIDE RETREAT",
+    "img": "hotel.svg",
+    "imageUrl": "https://r1imghtlak.mmtcdn.com/e16453c6-8414-4b28-b732-a7872eac2dc6.jpg",
+    "imageStatus": "real-image-url-verified"
+  },
+  {
+    "name": "HOTEL ALLSEASON",
+    "type": "hotel",
+    "rating": "4.7",
+    "reviews": "1,000+",
+    "offer": "10% OFF",
+    "tag": "LAKEFRONT HOTEL",
+    "img": "hotel.svg",
+    "imageUrl": "https://q-xx.bstatic.com/xdata/images/hotel/840x460/60111706.jpg?k=4d6088edcbdd53d79cc4081007544f03a30eb925630a95ff01b9bb6998830b5f&o=",
+    "imageStatus": "real-image-url-verified"
+  },
+  {
+    "name": "Chandra Inn",
+    "type": "hotel",
+    "rating": "4.3",
+    "reviews": "661",
+    "offer": "5% OFF",
+    "tag": "CITY HOTEL",
+    "img": "hotel.svg",
+    "imageUrl": "https://media.easemytrip.com/media/hotel/temp1/roomimage/roomimagepqmqpa.jpg",
+    "imageStatus": "real-image-url-verified"
+  },
+  {
+    "name": "Ashtamudi Villas",
+    "type": "hotel",
+    "rating": "4.5",
+    "reviews": "342",
+    "offer": "10% OFF",
+    "tag": "LAKE VILLAS",
+    "img": "hotel.svg",
+    "imageUrl": "https://r1imghtlak.mmtcdn.com/1812258f-4024-45ed-911b-ab47547cb352.jpg",
+    "imageStatus": "real-image-url-verified"
+  },
+  {
+    "name": "SR Residency",
+    "type": "hotel",
+    "rating": "4.4",
+    "reviews": "132",
+    "offer": "5% OFF",
+    "tag": "SMART STAY",
+    "img": "hotel.svg",
+    "imageUrl": "https://gos3.ibcdn.com/a31eae29-54cf-40a9-ab83-4d1b608ada4c.jpeg",
+    "imageStatus": "real-image-url-verified"
   },
   {
     "name": "Jolly Silks - Kollam",
     "type": "shops",
     "rating": "4.7",
-    "reviews": "14,663",
+    "reviews": "13,639",
     "offer": "15% OFF",
     "tag": "FASHION",
     "img": "fashion.svg",
     "imageUrl": "https://files.yappe.in/place/full/jolly-silks-kollam-3148240.webp",
-    "imageType": "real-business-or-activity-photo"
+    "imageStatus": "real-image-url-verified"
   },
   {
     "name": "Pulimoottil Silks",
@@ -129,7 +239,7 @@
     "tag": "SILKS & ETHNIC WEAR",
     "img": "fashion.svg",
     "imageUrl": "https://files.yappe.in/place/full/pulimoottil-silks-kollam-3148183.webp",
-    "imageType": "real-business-or-activity-photo"
+    "imageStatus": "real-image-url-verified"
   },
   {
     "name": "Style Union - Kollam",
@@ -140,7 +250,7 @@
     "tag": "FASHION",
     "img": "fashion.svg",
     "imageUrl": "https://d2ki7eiqd260sq.cloudfront.net/2025-01-08-1-6d74d67c-5fc9-4a86-b7a9-9f53817fd6d7.jpg",
-    "imageType": "real-business-or-activity-photo"
+    "imageStatus": "real-image-url-verified"
   },
   {
     "name": "Fashion Factory",
@@ -151,7 +261,7 @@
     "tag": "FAMILY FASHION",
     "img": "fashion.svg",
     "imageUrl": "https://singleinterface-timeline-images.s3.ap-south-1.amazonaws.com/images/279801/fb_post_279801_2026_07_18_00_14_02_108401308537137_1027040563410428.jpg",
-    "imageType": "real-business-or-activity-photo"
+    "imageStatus": "real-image-url-verified"
   },
   {
     "name": "Blossom Exclusive Store Kollam",
@@ -162,7 +272,7 @@
     "tag": "WOMEN'S FASHION",
     "img": "fashion.svg",
     "imageUrl": "https://media.licdn.com/dms/image/v2/D4D22AQEbC-Q8BdkV2A/feedshare-shrink_800/feedshare-shrink_800/0/1699082640755?e=2147483647&t=-b82_Pg-nFdeWBuql9caJSKm-hghDEdpBuP34nbStj4&v=beta",
-    "imageType": "real-business-or-activity-photo"
+    "imageStatus": "real-image-url-verified"
   },
   {
     "name": "Syzygy Ecosports",
@@ -171,9 +281,9 @@
     "reviews": "470",
     "offer": "10% OFF",
     "tag": "KAYAKING",
-    "img": "kayak.svg",
+    "img": "boat.svg",
     "imageUrl": "https://media1.thrillophilia.com/filestore/9wfsgtm7er9ptba464w6y648b0b4_Syzygy-Ecosports-Mangrove-Forest-Varkala-Kayaking-IMG_0666-1920px.jpg",
-    "imageType": "real-business-or-activity-photo"
+    "imageStatus": "real-image-url-verified"
   },
   {
     "name": "Kayabay Adventure",
@@ -182,9 +292,9 @@
     "reviews": "346",
     "offer": "10% OFF",
     "tag": "KAYAKING",
-    "img": "kayak.svg",
+    "img": "boat.svg",
     "imageUrl": "https://media1.thrillophilia.com/filestore/pe9v2c8gvuerf013q1nau5kcctmx_mangrove-kayaking.jpg",
-    "imageType": "real-business-or-activity-photo"
+    "imageStatus": "real-image-url-verified"
   },
   {
     "name": "Mangrove Dreams Adventure Water Sports",
@@ -193,9 +303,9 @@
     "reviews": "2,235",
     "offer": "10% OFF",
     "tag": "WATER SPORTS",
-    "img": "kayak.svg",
+    "img": "boat.svg",
     "imageUrl": "https://media1.thrillophilia.com/filestore/pe9v2c8gvuerf013q1nau5kcctmx_mangrove-kayaking.jpg",
-    "imageType": "real-business-or-activity-photo"
+    "imageStatus": "real-image-url-verified"
   },
   {
     "name": "Mangrove Wonders Kayaking",
@@ -204,9 +314,9 @@
     "reviews": "1,283",
     "offer": "10% OFF",
     "tag": "KAYAKING",
-    "img": "kayak.svg",
+    "img": "boat.svg",
     "imageUrl": "https://media1.thrillophilia.com/filestore/9wfsgtm7er9ptba464w6y648b0b4_Syzygy-Ecosports-Mangrove-Forest-Varkala-Kayaking-IMG_0666-1920px.jpg",
-    "imageType": "real-business-or-activity-photo"
+    "imageStatus": "real-image-url-verified"
   },
   {
     "name": "Kollam Dream House Boat",
@@ -217,7 +327,7 @@
     "tag": "HOUSEBOAT",
     "img": "boat.svg",
     "imageUrl": "https://toursinindia.in/images/houseboats/all/5-bed-luxury.webp",
-    "imageType": "real-business-or-activity-photo"
+    "imageStatus": "real-image-url-verified"
   },
   {
     "name": "Dream Cruise Houseboats",
@@ -228,7 +338,7 @@
     "tag": "HOUSEBOAT",
     "img": "boat.svg",
     "imageUrl": "https://toursinindia.in/images/houseboats/all/5-bed-luxury.webp",
-    "imageType": "real-business-or-activity-photo"
+    "imageStatus": "real-image-url-verified"
   },
   {
     "name": "Kollam Houseboats Ashtamudi Lake Tours",
@@ -239,7 +349,7 @@
     "tag": "BOAT TOUR",
     "img": "boat.svg",
     "imageUrl": "https://toursinindia.in/images/houseboats/all/5-bed-luxury.webp",
-    "imageType": "real-business-or-activity-photo"
+    "imageStatus": "real-image-url-verified"
   },
   {
     "name": "Adventure Park, Kollam",
@@ -248,8 +358,8 @@
     "reviews": "7,851",
     "offer": "10% OFF",
     "tag": "ADVENTURE",
-    "img": "adventure.svg",
+    "img": "boat.svg",
     "imageUrl": "https://www.keralatourism.org/images/destination/mobile/Adventure_Park_Kollam_1.jpg",
-    "imageType": "real-business-or-activity-photo"
+    "imageStatus": "real-image-url-verified"
   }
 ]

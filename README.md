@@ -1,14 +1,15 @@
-# coupon4u v0.6.0
+# coupon4u v0.6.3
 
-## Major update
-Real business/activity images are now wired into the demo listings instead of generated placeholder visuals.
+Core catalog now matches the intended initial demo:
+- 10 restaurants
+- 10 hotels
+- 5 clothing shops
+- 8 activity listings
 
-Real-image examples include:
-- Restaurants: Supreme Uppercrust, SULAIMANI LAND'S END, Le Delice, Meen by Chef Pillai Kollam, Ramees Restaurant.
-- Hotels: The Leela Ashtamudi, The Quilon Beach Hotel, Dfort Hotel Kollam, Club Mahindra Ashtamudi, Samiira on Ashtamudi Lake.
-- Shops: Jolly Silks, Pulimoottil Silks, Style Union, Fashion Factory, Blossom Exclusive Store.
-- Activities: mangrove kayaking imagery and Kollam/Ashtamudi houseboat imagery.
+All 25 core restaurant/hotel/shop listings have a business-specific real-image URL. The app uses the specific URL instead of a generic category image.
 
-The app now visibly shows **v0.6.0** on the login/home interface.
+The restaurant list includes Javees Cinema Restaurant, Chef Stop, Wok & Grill, Black Gold and Sree Ayyappa in addition to the five earlier restaurants. The hotel list includes Waterfront by Palmyra, Hotel Allseason, Chandra Inn, Ashtamudi Villas and SR Residency in addition to the five earlier hotels.
 
-Important: these are prototype image URLs from current web image/business results. For production, obtain merchant-approved/licensed images and preferably store them in your own asset storage/CDN. Demo discounts remain demo offers.
+Image URLs were verified against current web/business/official listing results. They remain external URLs in this prototype because the execution environment cannot reliably download third-party image binaries. The UI now displays a neutral "Image unavailable" state if an external host blocks the image instead of showing the wrong generic photo.
+
+Version: v0.6.3
