@@ -1,15 +1,15 @@
-# coupon4u v0.6.3
+# coupon4u v0.8.0 — Premium Ticket Voucher UI
 
-Core catalog now matches the intended initial demo:
-- 10 restaurants
-- 10 hotels
-- 5 clothing shops
-- 8 activity listings
+A mobile-first coupon marketplace redesign based on the supplied visual reference.
 
-All 25 core restaurant/hotel/shop listings have a business-specific real-image URL. The app uses the specific URL instead of a generic category image.
+## Highlights
+- Premium digital-ticket voucher cards with merchant artwork zones
+- Cream voucher paper, perforated edges, barcode and redeem strip
+- Dark CRED-inspired shell with richer editorial typography
+- Home, Saved, My Offers, More, Detail and Claimed flows
+- Existing Kollam restaurant/hotel/shop/activity catalog retained
+- No external merchant image URLs
+- LocalStorage for saved and claimed offers
+- Version shown as v0.8.0
 
-The restaurant list includes Javees Cinema Restaurant, Chef Stop, Wok & Grill, Black Gold and Sree Ayyappa in addition to the five earlier restaurants. The hotel list includes Waterfront by Palmyra, Hotel Allseason, Chandra Inn, Ashtamudi Villas and SR Residency in addition to the five earlier hotels.
-
-Image URLs were verified against current web/business/official listing results. They remain external URLs in this prototype because the execution environment cannot reliably download third-party image binaries. The UI now displays a neutral "Image unavailable" state if an external host blocks the image instead of showing the wrong generic photo.
-
-Version: v0.6.3
+Open `index.html` in a browser. For fetch() to load `offers.json`, use a small local web server rather than `file://`.

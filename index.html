@@ -1,29 +1,154 @@
 <!doctype html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-<title>coupon4u v0.6.3</title><link rel="stylesheet" href="style.css"></head><body><div class="app">
-<section id="login" class="screen login"><header><div class="logo">coupon<span>4u</span></div><div class="pill">KERALA</div></header>
-<div class="intro"><small>YOUR KERALA GUEST PASS</small><h1>Good places.<br><em>Better offers.</em></h1><p>Handpicked restaurants, stays, shops and experiences for visitors exploring Kerala.</p></div>
-<div class="ticker"><div class="ticker-track"><div><b>10% OFF</b><span>Restaurants</span></div><div><b>15% OFF</b><span>Fashion</span></div><div><b>10% OFF</b><span>Kayaking & boating</span></div><div><b>5% OFF</b><span>Selected stays</span></div><div><b>10% OFF</b><span>Restaurants</span></div></div></div>
-<div class="login-card"><label>Mobile number</label><div class="phone"><b>+91</b><input id="phone" maxlength="10" inputmode="numeric" placeholder="Enter mobile number"></div><button class="black" onclick="customerLogin()">Continue <b>→</b></button><div class="or"><i></i>or<i></i></div><button class="outline" onclick="show('agent')">Agent login <b>↗</b></button><small>Demo offers are shown until businesses officially join coupon4u.</small></div></section>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#050608">
+<title>coupon4u · v0.8.0</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="app-shell">
 
-<section id="home" class="screen home hidden"><header class="home-head"><div><div><div class="logo">coupon<span>4u</span></div><small>📍 Kollam, Kerala</small></div><span class="app-version">v0.6.3</span></div><button class="avatar">AS</button></header>
-<div class="headline"><div><small>CURATED FOR YOU</small><h2>Offers worth<br><em>leaving the hotel for.</em></h2></div><div class="pass">GUEST<br><b>PASS</b></div></div>
-<div class="search">⌕<input id="search" placeholder="Search places or offers"></div>
-<div class="cats"><button class="active" data-cat="all">All</button><button data-cat="restaurant">🍽 Restaurant</button><button data-cat="hotel">🏨 Hotel</button><button data-cat="shops">🛍 Shops</button><button data-cat="others">✦ Others</button></div>
-<div class="section"><small>TOP PICKS IN KOLLAM</small><h3 id="sectionTitle">Exclusive offers</h3></div>
-<div id="deck" class="deck"></div><div id="dots" class="dots"></div>
-<div class="section"><small>MORE OFFERS</small><h3>Explore Kollam</h3></div><div id="mini" class="mini-list"></div>
-<nav><button class="nav active" data-page="home">⌂<span>Home</span></button><button class="nav" data-page="saved">♡<span>Saved</span></button><button class="nav" data-page="offers">🎟<span>My offers</span></button><button class="nav" data-page="more">☰<span>More</span></button></nav></section>
+<section id="login" class="screen login-screen">
+  <header class="topbar">
+    <div class="logo">coupon<span>4u</span><small>KERALA</small></div>
+    <span class="version">v0.8.0</span>
+  </header>
+  <div class="login-hero">
+    <div class="location">⌖ &nbsp; KOLLAM, KERALA</div>
+    <div class="guest">♕ GUEST PASS</div>
+    <h1>Good places.<br><em>Better offers.</em></h1>
+    <p>Handpicked offers for your Kerala journey.</p>
+    <div class="kerala-lineart" aria-hidden="true">
+      <span class="sun"></span><span class="palm p1"></span><span class="palm p2"></span><span class="lighthouse"></span>
+    </div>
+  </div>
+  <div class="login-card">
+    <label>MOBILE NUMBER</label>
+    <div class="phone-input"><b>+91</b><input id="phone" inputmode="numeric" maxlength="10" placeholder="Enter your mobile number"></div>
+    <button class="red-btn" onclick="customerLogin()">Enter coupon4u <b>→</b></button>
+    <div class="login-divider"><span>OR</span></div>
+    <button class="dark-outline" onclick="show('agent')">Partner / Agent login <b>→</b></button>
+  </div>
+  <div class="login-note">ONE PASS · CURATED LOCAL OFFERS · KERALA</div>
+</section>
 
-<section id="saved" class="screen subpage hidden"><header class="subhead"><button onclick="home()">←</button><div class="logo">Saved</div><span></span></header><div class="subintro"><small>YOUR FAVOURITES</small><h1>Saved places</h1><p>Offers you want to come back to.</p></div><div id="savedList" class="saved-list"></div></section>
+<section id="home" class="screen hidden">
+  <header class="home-top">
+    <div>
+      <div class="logo">coupon<span>4u</span><small>KERALA</small></div>
+      <div class="home-location">⌖ &nbsp; Kollam, Kerala⌄</div>
+    </div>
+    <div class="home-actions">
+      <button class="pass-chip" onclick="show('more')">♕ <span>GUEST PASS</span></button>
+      <button class="avatar" onclick="show('more')">AS</button>
+    </div>
+  </header>
 
-<section id="offers" class="screen subpage hidden"><header class="subhead"><button onclick="home()">←</button><div class="logo">My offers</div><span></span></header><div class="subintro"><small>YOUR CLAIMS</small><h1>Redeemed offers</h1><p>Your claimed coupons and redemption IDs.</p></div><div id="claimedList" class="saved-list"></div></section>
+  <div class="home-hero">
+    <div>
+      <div class="eyebrow">WELCOME BACK · KOLLAM</div>
+      <h1>Good places.<br><em>Better offers.</em></h1>
+      <p>Handpicked offers for your Kerala journey.</p>
+    </div>
+    <div class="hero-art" aria-hidden="true"><span>4u</span></div>
+  </div>
 
-<section id="more" class="screen subpage hidden"><header class="subhead"><button onclick="home()">←</button><div class="logo">More</div><span></span></header><div class="menu"><button onclick="alert('Your Guest Pass is active for this demo.')">🎟 <b>Guest Pass</b><span>View pass details</span></button><button onclick="alert('Location: Kollam, Kerala')">📍 <b>Location</b><span>Kollam, Kerala</span></button><button onclick="alert('Business partnerships will appear here.')">🤝 <b>Partner with coupon4u</b><span>Hotels, taxis, restaurants & shops</span></button><button onclick="alert('Help centre — demo')">?</b> <b>Help & support</b><span>Frequently asked questions</span></button></div></section>
+  <div class="searchbar"><span>⌕</span><input id="search" placeholder="Search places or offers"></div>
 
-<section id="detail" class="screen detail hidden"><button class="back" onclick="home()">←</button><div id="detailImage" class="detail-image"></div><div class="detail-body"><div id="detailRating" class="rating"></div><h1 id="detailName"></h1><p id="detailDesc"></p><button class="save-detail" id="saveDetail">♡ Save</button><div class="offer-box"><small>COUPON4U GUEST OFFER</small><strong id="detailOffer"></strong><span>Claiming creates a unique redemption ID.</span></div><div class="verified">✓<div><b>coupon4u verified</b><small>Demo listing — partner approval required</small></div></div><button class="black claim" onclick="claimOffer()">Claim offer <b>→</b></button></div></section>
+  <div class="categories">
+    <button class="active" data-cat="all">All</button>
+    <button data-cat="restaurant">♜ Restaurants</button>
+    <button data-cat="hotel">▱ Hotels</button>
+    <button data-cat="shops">♧ Shops</button>
+    <button data-cat="others">♢ Activities</button>
+    <button data-cat="others">▦ Others</button>
+  </div>
 
-<section id="claimed" class="screen claimed hidden"><div class="logo">coupon<span>4u</span></div><div class="claim-wrap"><div class="check">✓</div><small>OFFER CLAIMED</small><h1 id="claimedOffer"></h1><p>Present this redemption ID at the venue before payment.</p><div class="code"><small>UNIQUE REDEMPTION ID</small><strong id="code"></strong><span>Valid once · Today</span></div><button class="black" onclick="show('offers');renderClaims()">Go to My Offers <b>→</b></button></div></section>
+  <div class="section-head">
+    <div><div class="eyebrow">DISCOVER</div><h2>Top picks in Kollam</h2></div>
+    <button id="seeAll">See all <b>›</b></button>
+  </div>
 
-<section id="agent" class="screen agent hidden"><header class="subhead"><button onclick="show('login')">←</button><div class="logo">coupon<span>4u</span></div><span></span></header><div class="agent-wrap"><small>PARTNER ACCESS</small><h1>Agent login</h1><p>Hotels, taxi partners and approved distributors can create guest passes.</p><div class="login-card"><label>Mobile number</label><div class="phone"><b>+91</b><input placeholder="Agent mobile number"></div><label>Password</label><input class="field" type="password" placeholder="Password"><button class="black" onclick="alert('Demo agent login')">Login <b>→</b></button></div></div></section>
-</div><script src="app.js"></script></body></html>
+  <div id="deck" class="voucher-deck"></div>
+  <div id="dots" class="deck-dots"></div>
+
+  <div class="feature-strip">
+    <div><span>COUPON4U</span><strong>One pass.<br>Many places.</strong></div>
+    <div class="strip-mark">C4U</div>
+  </div>
+
+  <div class="section-head more-head">
+    <div><div class="eyebrow">EXPLORE</div><h2>More offers for you</h2></div>
+    <button id="seeAll2">See all <b>›</b></button>
+  </div>
+  <div id="mini" class="mini-list"></div>
+
+  <nav class="bottom-nav">
+    <button class="active" data-page="home"><span>⌂</span>Home</button>
+    <button data-page="saved"><span>♡</span>Saved</button>
+    <button data-page="offers"><span>▱</span>My Offers</button>
+    <button data-page="more"><span>☰</span>More</button>
+  </nav>
+</section>
+
+<section id="saved" class="screen hidden sub-screen">
+  <header class="sub-top"><button onclick="home()">‹</button><div><b>Saved</b><small>YOUR SHORTLIST</small></div><span>v0.8.0</span></header>
+  <div class="sub-title"><div class="eyebrow">FAVOURITES</div><h1>Keep the<br><em>good ones.</em></h1></div>
+  <div id="savedList" class="mini-list"></div>
+</section>
+
+<section id="offers" class="screen hidden sub-screen">
+  <header class="sub-top"><button onclick="home()">‹</button><div><b>My Offers</b><small>YOUR COUPONS</small></div><span>v0.8.0</span></header>
+  <div class="sub-title"><div class="eyebrow">CLAIMED</div><h1>Your<br><em>privileges.</em></h1></div>
+  <div id="claimedList" class="claimed-list"></div>
+</section>
+
+<section id="more" class="screen hidden sub-screen">
+  <header class="sub-top"><button onclick="home()">‹</button><div><b>More</b><small>COUPON4U</small></div><span>v0.8.0</span></header>
+  <div class="more-card"><div class="mini-pass">C4U<br><b>PASS</b></div><h1>Good places.<br><em>Better value.</em></h1></div>
+  <div class="settings-list">
+    <button onclick="alert('Your Guest Pass is active.')"><span>01</span><b>Guest Pass</b><small>View your pass</small><i>›</i></button>
+    <button onclick="alert('Kollam, Kerala')"><span>02</span><b>Location</b><small>Kollam, Kerala</small><i>›</i></button>
+    <button onclick="alert('Business partnership enquiries')"><span>03</span><b>Partner with us</b><small>Hotels · taxis · shops · restaurants</small><i>›</i></button>
+    <button onclick="alert('Help centre — coming soon')"><span>04</span><b>Help & support</b><small>FAQs and contact</small><i>›</i></button>
+  </div>
+</section>
+
+<section id="detail" class="screen hidden detail-screen">
+  <div class="detail-head"><button onclick="home()">‹</button><div><button id="shareBtn">□</button><button id="save">♡</button></div></div>
+  <div id="detailVoucher" class="detail-voucher"></div>
+  <div class="verified"><span>✓</span><div><b>coupon4u verified</b><small>Enjoy before payment · Valid today</small></div></div>
+  <div class="about"><div class="eyebrow">ABOUT THE PLACE</div><p id="desc"></p></div>
+  <div class="info-row"><span>⌖</span><span id="address">Main Road, Kollam, Kerala</span></div>
+  <div class="info-row"><span>◷</span><span>11:00 AM – 11:00 PM</span></div>
+  <div class="info-row"><span>☎</span><span>0474 123 4567</span></div>
+</section>
+
+<section id="claimed" class="screen hidden claim-screen">
+  <div class="claim-top"><div class="logo">coupon<span>4u</span><small>KERALA</small></div><span>v0.8.0</span></div>
+  <div class="claim-icon">✓</div>
+  <div class="eyebrow success">SUCCESS</div>
+  <h1>OFFER<br><em>CLAIMED!</em></h1>
+  <p id="coffer"></p>
+  <div id="claimVoucher" class="claim-voucher"></div>
+  <button class="red-btn" onclick="show('offers');renderClaims()">View My Offers <b>→</b></button>
+  <button class="text-btn" onclick="home()">Back to Home</button>
+</section>
+
+<section id="agent" class="screen hidden agent-screen">
+  <header class="sub-top"><button onclick="show('login')">‹</button><div class="logo">coupon<span>4u</span><small>KERALA</small></div><span>v0.8.0</span></header>
+  <div class="agent-body"><div class="eyebrow">FOR HOTELS · TAXIS · PARTNERS</div><h1>Give guests<br><em>something extra.</em></h1><p>Generate a guest coupon pass with one mobile number.</p>
+    <div class="agent-form">
+      <label>AGENT MOBILE</label><input inputmode="numeric" placeholder="+91 mobile number">
+      <label>PASSWORD</label><input type="password" placeholder="Password">
+      <button class="red-btn" onclick="alert('Demo partner login')">Enter partner portal <b>→</b></button>
+    </div>
+  </div>
+</section>
+
+</main>
+<script src="app.js"></script>
+</body>
+</html>

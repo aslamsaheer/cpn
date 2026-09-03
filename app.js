@@ -1,19 +1,124 @@
 let offers=[],current=null,filterType="all";
-function imgUrl(x){return x.imageUrl||("assets/"+x.img)}
-function safeImg(x){return imgUrl(x).replace(/&/g,"&amp;").replace(/"/g,"&quot;")}
-function fallbackImg(el){el.onerror=null;el.style.display="none";let p=el.parentElement;if(p&&!p.querySelector(".photo-missing")){let d=document.createElement("div");d.className="photo-missing";d.textContent="Image unavailable";p.appendChild(d)}}
-let saved=JSON.parse(localStorage.getItem("c4u_saved")||"[]"),claimed=JSON.parse(localStorage.getItem("c4u_claimed")||"[]");
-function show(id){document.querySelectorAll(".screen").forEach(s=>s.classList.add("hidden"));document.getElementById(id).classList.remove("hidden");window.scrollTo(0,0)}
+let saved=JSON.parse(localStorage.getItem("c4u_saved")||"[]");
+let claimed=JSON.parse(localStorage.getItem("c4u_claimed")||"[]");
+
+const $=id=>document.getElementById(id);
+const typeLabel={restaurant:"RESTAURANT",hotel:"HOTEL",shops:"SHOP",others:"EXPERIENCE"};
+
+function show(id){
+  document.querySelectorAll(".screen").forEach(s=>s.classList.add("hidden"));
+  $(id).classList.remove("hidden");
+  window.scrollTo({top:0,behavior:"instant"});
+}
 function home(){show("home");renderHome()}
-function customerLogin(){let p=document.getElementById("phone").value.replace(/\D/g,"");if(p.length===10)home();else document.getElementById("phone").focus()}
-function openOffer(i){current=offers[i];document.getElementById("detailName").textContent=current.name;document.getElementById("detailRating").innerHTML=`★ ${current.rating} <span>· ${current.reviews} Google reviews · Kollam</span>`;document.getElementById("detailOffer").textContent=current.offer;document.getElementById("detailDesc").textContent=`${current.tag.toLowerCase()} — a curated coupon4u pick for visitors exploring Kollam.`;document.getElementById("detailImage").innerHTML=`<img class="detail-photo" src="${safeImg(current)}" onerror="fallbackImg(this)" alt="${current.name}">`;document.getElementById("saveDetail").textContent=saved.includes(current.name)?"♥ Saved":"♡ Save";show("detail")}
-function toggleSave(){if(!current)return;let i=saved.indexOf(current.name);if(i>=0)saved.splice(i,1);else saved.push(current.name);localStorage.setItem("c4u_saved",JSON.stringify(saved));document.getElementById("saveDetail").textContent=saved.includes(current.name)?"♥ Saved":"♡ Save";renderSaved()}
-function claimOffer(){if(!current)return;let code="RED-"+Math.random().toString(36).slice(2,8).toUpperCase();claimed.unshift({code,name:current.name,offer:current.offer,rating:current.rating,img:current.img,imageUrl:current.imageUrl,time:new Date().toLocaleTimeString([],{hour:"2-digit",minute:"2-digit"})});localStorage.setItem("c4u_claimed",JSON.stringify(claimed));document.getElementById("claimedOffer").textContent=current.offer;document.getElementById("code").textContent=code;show("claimed")}
-function card(x){return `<article class="card" onclick="openOffer(${offers.indexOf(x)})"><div class="card-img"><img class="card-photo" src="${safeImg(x)}" onerror="fallbackImg(this)" alt="${x.name}"></div><div class="card-content"><div class="tag">${x.tag}</div><div class="verified">✓ coupon4u verified</div><h4>${x.name}</h4><div class="meta">★ ${x.rating} · ${x.reviews} Google reviews · Kollam</div><div class="offer-pill"><strong>${x.offer}</strong><span>CLAIM →</span></div></div></article>`}
-function mini(x){return `<div class="mini" onclick="openOffer(${offers.indexOf(x)})"><div class="mini-img"><img src="${safeImg(x)}" onerror="fallbackImg(this)" alt="${x.name}"></div><div class="mini-main"><b>${x.name}</b><small>★ ${x.rating} · ${x.reviews} reviews</small><small>${x.tag}</small></div><div class="mini-off"><strong>${x.offer.replace(" OFF","")}</strong><small>OFF</small></div></div>`}
-function renderHome(){let list=filterType==="all"?offers:offers.filter(x=>x.type===filterType),top=list.slice(0,6),rest=list.slice(6);document.getElementById("deck").innerHTML=top.map(card).join("")||'<div class="empty">No offers found.</div>';document.getElementById("dots").innerHTML=top.map((_,i)=>`<i class="${i===0?"active":""}"></i>`).join("");document.getElementById("mini").innerHTML=rest.map(mini).join("")||'<div class="empty">No more offers.</div>';document.getElementById("sectionTitle").textContent=filterType==="all"?"Exclusive offers":filterType==="shops"?"15% fashion offers":filterType==="others"?"10% activity offers":`${filterType[0].toUpperCase()+filterType.slice(1)} offers`}
-function filter(type,btn){filterType=type;document.querySelectorAll(".cats button").forEach(b=>b.classList.remove("active"));btn.classList.add("active");renderHome()}
-function renderSaved(){let list=offers.filter(x=>saved.includes(x.name));document.getElementById("savedList").innerHTML=list.length?list.map(x=>`<div class="saved-card" onclick="openOffer(${offers.indexOf(x)})"><img src="${safeImg(x)}" onerror="fallbackImg(this)" alt="${x.name}"><div><b>${x.name}</b><small>★ ${x.rating} · ${x.reviews} reviews</small><small>${x.tag}</small></div><div class="offer">${x.offer}</div></div>`).join(""):'<div class="empty">No saved offers yet.<br>Tap ♡ Save on an offer.</div>'}
-function renderClaims(){document.getElementById("claimedList").innerHTML=claimed.length?claimed.map(c=>`<div class="saved-card"><img src="${c.imageUrl||"assets/"+c.img}" onerror="fallbackImg(this)" alt="${c.name}"><div><b>${c.name}</b><small>${c.offer} · ${c.time}</small><small>Redemption ID: ${c.code}</small></div></div>`).join(""):'<div class="empty">You have not claimed an offer yet.</div>'}
-function setup(){document.querySelectorAll(".cats button").forEach(b=>b.onclick=()=>filter(b.dataset.cat,b));document.querySelectorAll("nav button").forEach(b=>b.onclick=()=>{let p=b.dataset.page;if(p==="home")home();if(p==="saved"){show("saved");renderSaved()}if(p==="offers"){show("offers");renderClaims()}if(p==="more")show("more")});document.getElementById("saveDetail").onclick=toggleSave;document.getElementById("search").addEventListener("input",e=>{let q=e.target.value.toLowerCase(),list=(filterType==="all"?offers:offers.filter(x=>x.type===filterType)).filter(x=>(x.name+" "+x.tag).toLowerCase().includes(q));document.getElementById("deck").innerHTML=list.map(card).join("")||'<div class="empty">No matching offers.</div>';document.getElementById("mini").innerHTML=""})}
-fetch("offers.json").then(r=>r.json()).then(d=>{offers=d;setup();renderHome();document.title="coupon4u v0.6.3"}).catch(()=>{offers=[];setup()})
+function customerLogin(){
+  if($("phone").value.replace(/\D/g,"").length===10) home();
+  else alert("Enter a valid 10-digit mobile number.");
+}
+function initials(name){return name.split(/[\s&-]+/).filter(Boolean).slice(0,2).map(x=>x[0]).join("").toUpperCase()}
+function palette(type){
+  return type==="restaurant" ? "wine" : type==="hotel" ? "navy" : type==="shops" ? "violet" : "teal";
+}
+function voucherMarkup(x, index, large=false){
+  const pct=x.offer.replace(" OFF","");
+  const code="C4U-"+x.name.replace(/[^A-Z0-9]+/gi,"").slice(0,7).toUpperCase()+pct.replace("%","");
+  const p=palette(x.type);
+  const cls=large?"voucher-card large":"voucher-card";
+  return `<article class="${cls} ${p}" onclick="openOffer(${index})">
+    <div class="voucher-art">
+      <div class="art-glow"></div><div class="art-orbit"></div>
+      <div class="merchant-symbol">${initials(x.name)}</div>
+      <div class="merchant-copy"><b>${x.name}</b><small>${x.tag}</small></div>
+      <span class="art-corner">KOLLAM</span>
+    </div>
+    <div class="voucher-paper">
+      <div class="perforation top"></div>
+      <div class="voucher-content">
+        <div class="offer-label">COUPON4U EXCLUSIVE</div>
+        <div class="offer-title"><strong>${pct}% OFF</strong><span>${x.type==="hotel"?"ON ROOM BOOKING":"YOUR BILL"}</span></div>
+        <div class="code-row"><span>${code}</span><button onclick="event.stopPropagation();copyCode('${code}')">▢</button></div>
+        <div class="barcode"></div>
+      </div>
+      <div class="perforation side"></div>
+    </div>
+    <button class="redeem-bar" onclick="event.stopPropagation();openOffer(${index})"><span>Redeem Now</span><b>→</b></button>
+    <div class="ticket-notches"><i></i><i></i><i></i><i></i><i></i></div>
+  </article>`;
+}
+function openOffer(i){
+  current=offers[i];
+  $("detailVoucher").innerHTML=voucherMarkup(current,i,true);
+  $("desc").textContent=`A curated ${typeLabel[current.type].toLowerCase()} pick for visitors exploring Kollam.`;
+  $("address").textContent=current.type==="hotel"?"Ashtamudi / Kollam, Kerala":"Main Road, Kollam, Kerala";
+  $("save").textContent=saved.includes(current.name)?"♥":"♡";
+  show("detail");
+}
+function toggleSave(){
+  if(!current)return;
+  const i=saved.indexOf(current.name);
+  if(i>=0)saved.splice(i,1); else saved.push(current.name);
+  localStorage.setItem("c4u_saved",JSON.stringify(saved));
+  $("save").textContent=saved.includes(current.name)?"♥":"♡";
+  renderSaved();
+}
+function copyCode(code){
+  navigator.clipboard?.writeText(code).catch(()=>{});
+  const b=document.querySelector(".code-row button"); if(b){b.textContent="✓";setTimeout(()=>b.textContent="▢",900)}
+}
+function claim(){
+  if(!current)return;
+  const code="C4U "+Math.random().toString(36).slice(2,6).toUpperCase()+" "+Math.random().toString(36).slice(2,6).toUpperCase();
+  claimed.unshift({code,name:current.name,offer:current.offer,time:new Date().toLocaleTimeString([], {hour:"2-digit",minute:"2-digit"})});
+  localStorage.setItem("c4u_claimed",JSON.stringify(claimed));
+  $("coffer").textContent=current.name;
+  $("claimVoucher").innerHTML=`<div class="claim-code"><small>UNIQUE REDEMPTION ID</small><strong>${code}</strong><div class="barcode wide"></div><span>Valid Today Only · One-time Use</span></div>`;
+  show("claimed");
+}
+function mini(x){
+  const i=offers.indexOf(x);
+  return `<button class="mini-card" onclick="openOffer(${i})">
+    <span class="mini-symbol ${palette(x.type)}">${initials(x.name)}</span>
+    <span class="mini-main"><b>${x.name}</b><small>★ ${x.rating} · ${x.reviews} reviews</small><small>${x.tag}</small></span>
+    <span class="mini-off"><b>${x.offer.replace(" OFF","")}</b><small>OFF</small></span>
+  </button>`;
+}
+function renderHome(){
+  let list=filterType==="all"?offers:offers.filter(x=>x.type===filterType);
+  const top=list.slice(0,6);
+  $("deck").innerHTML=top.map((x,i)=>voucherMarkup(x,offers.indexOf(x))).join("");
+  $("dots").innerHTML=top.map((_,i)=>`<i class="${i===0?"active":""}"></i>`).join("");
+  $("mini").innerHTML=list.slice(6).map(mini).join("") || `<div class="empty">No offers found.</div>`;
+}
+function filter(type,b){
+  filterType=type;
+  document.querySelectorAll(".categories button").forEach(x=>x.classList.remove("active"));
+  b.classList.add("active"); renderHome();
+}
+function renderSaved(){
+  const list=offers.filter(x=>saved.includes(x.name));
+  $("savedList").innerHTML=list.map(mini).join("")||`<div class="empty">No saved offers yet.</div>`;
+}
+function renderClaims(){
+  $("claimedList").innerHTML=claimed.map(c=>`<div class="claimed-item"><b>${c.name}</b><strong>${c.offer}</strong><small>Redemption ID · ${c.code}</small><small>Claimed at ${c.time}</small></div>`).join("")||`<div class="empty">No claimed offers yet.</div>`;
+}
+function search(){
+  const q=$("search").value.trim().toLowerCase();
+  const list=(filterType==="all"?offers:offers.filter(x=>x.type===filterType))
+    .filter(x=>(x.name+" "+x.tag+" "+x.offer).toLowerCase().includes(q));
+  $("deck").innerHTML=list.slice(0,6).map(x=>voucherMarkup(x,offers.indexOf(x))).join("")||`<div class="empty">No matching offers.</div>`;
+}
+function setup(){
+  document.querySelectorAll(".categories button").forEach(b=>b.onclick=()=>filter(b.dataset.cat,b));
+  document.querySelectorAll(".bottom-nav button").forEach(b=>b.onclick=()=>{
+    const p=b.dataset.page;
+    if(p==="home")home();
+    if(p==="saved"){show("saved");renderSaved()}
+    if(p==="offers"){show("offers");renderClaims()}
+    if(p==="more")show("more");
+  });
+  $("save").onclick=toggleSave;
+  $("search").addEventListener("input",search);
+  $("seeAll").onclick=()=>{filterType="all";document.querySelectorAll(".categories button").forEach((b,i)=>b.classList.toggle("active",i===0));renderHome();document.querySelector(".more-head").scrollIntoView({behavior:"smooth"})};
+  $("seeAll2").onclick=()=>window.scrollTo({top:document.body.scrollHeight,behavior:"smooth"});
+}
+fetch("offers.json").then(r=>r.json()).then(d=>{offers=d;setup();renderHome()});
