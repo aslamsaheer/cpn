@@ -20,12 +20,13 @@ function palette(type){
   return type==="restaurant" ? "wine" : type==="hotel" ? "navy" : type==="shops" ? "violet" : "teal";
 }
 function voucherMarkup(x, index, large=false){
-  const pct=x.offer.replace(" OFF","");
+  const pct=x.offer.replace(" OFF","").replace("%","");
   const code="C4U-"+x.name.replace(/[^A-Z0-9]+/gi,"").slice(0,7).toUpperCase()+pct.replace("%","");
   const p=palette(x.type);
   const cls=large?"voucher-card large":"voucher-card";
   return `<article class="${cls} ${p}" onclick="openOffer(${index})">
     <div class="voucher-art">
+      <img class="merchant-image" src="${x.image}" alt="${x.name}" onerror="this.style.display='none';this.parentElement.classList.add('no-image')">
       <div class="art-glow"></div><div class="art-orbit"></div>
       <div class="merchant-symbol">${initials(x.name)}</div>
       <div class="merchant-copy"><b>${x.name}</b><small>${x.tag}</small></div>
@@ -82,12 +83,30 @@ function mini(x){
     <span class="mini-off"><b>${x.offer.replace(" OFF","")}</b><small>OFF</small></span>
   </button>`;
 }
+function moreCard(x){
+  const i=offers.indexOf(x);
+  const pct=x.offer.replace(" OFF","").replace("%","");
+  const p=palette(x.type);
+  return `<button class="offer-mini-card ${p}" onclick="openOffer(${i})">
+    <div class="mini-art">
+      <img src="${x.image}" alt="${x.name}" onerror="this.style.display='none';this.parentElement.classList.add('no-image')">
+      <span>${initials(x.name)}</span>
+      <small>${typeLabel[x.type]}</small>
+    </div>
+    <div class="mini-card-body">
+      <b>${x.name}</b>
+      <span>${x.tag}</span>
+      <strong>${pct}% <small>OFF</small></strong>
+    </div>
+    <div class="mini-card-footer"><span>VIEW OFFER</span><b>→</b></div>
+  </button>`;
+}
 function renderHome(){
   let list=filterType==="all"?offers:offers.filter(x=>x.type===filterType);
   const top=list.slice(0,6);
-  $("deck").innerHTML=top.map((x,i)=>voucherMarkup(x,offers.indexOf(x))).join("");
+  $("deck").innerHTML=top.map((x)=>voucherMarkup(x,offers.indexOf(x))).join("");
   $("dots").innerHTML=top.map((_,i)=>`<i class="${i===0?"active":""}"></i>`).join("");
-  $("mini").innerHTML=list.slice(6).map(mini).join("") || `<div class="empty">No offers found.</div>`;
+  $("mini").innerHTML=list.slice(6).map(moreCard).join("") || `<div class="empty">No offers found.</div>`;
 }
 function filter(type,b){
   filterType=type;

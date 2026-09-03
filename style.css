@@ -8,3 +8,217 @@
 .detail-screen{background:#050608;padding-bottom:25px}.detail-head{height:70px;padding:15px 20px;display:flex;align-items:center;justify-content:space-between}.detail-head>button{border:0;background:none;color:#fff;font-size:31px;font-weight:200}.detail-head>div button{border:0;background:#1b1d21;color:#fff;border-radius:50%;width:39px;height:39px;margin-left:8px;font-size:17px}.detail-voucher{padding:8px 24px 18px}.voucher-card.large{width:100%;min-width:0;max-width:none;height:480px}.voucher-card.large .voucher-art{height:245px}.voucher-card.large .merchant-copy b{font-size:27px;max-width:300px}.voucher-card.large .offer-title strong{font-size:42px}.voucher-card.large .voucher-paper{height:178px}.voucher-card.large .redeem-bar{height:61px}.verified{margin:0 24px 24px;border:1px solid #20242b;background:#0c0f13;border-radius:16px;padding:13px;display:flex;gap:10px;align-items:center}.verified>span{width:25px;height:25px;border-radius:50%;display:grid;place-items:center;background:#159765;color:#fff;font-weight:700}.verified b{display:block;font-size:10px}.verified small{display:block;color:#777c86;font-size:8px;margin-top:4px}.about{padding:0 24px 14px}.about p{font-size:11px;color:#8c9099;line-height:1.55;margin:7px 0}.info-row{margin:8px 24px;border:1px solid #20242b;background:#0c0f13;border-radius:14px;padding:12px;color:#c8cad0;font-size:10px;display:flex;gap:10px}.info-row span:first-child{color:#aeb2ba}
 .claim-screen{padding:23px 24px;background:radial-gradient(circle at 50% 24%,#111c16,#050608 42%);text-align:center}.claim-top{display:flex;justify-content:space-between;align-items:flex-start}.claim-top>span{font-size:8px;color:#666b75}.claim-icon{width:72px;height:72px;margin:72px auto 18px;border-radius:50%;background:radial-gradient(circle at 35% 25%,#76e099,#15924f 65%,#0b6537);display:grid;place-items:center;font-size:40px;box-shadow:0 0 40px #2ed16c55}.success{color:#55d581}.claim-screen h1{font-family:"Playfair Display",serif;font-size:45px;line-height:.9;letter-spacing:-2px;margin:10px 0}.claim-screen>p{font-size:14px;color:#f0f1f3;margin:16px 0 20px}.claim-voucher{background:var(--paper);color:var(--ink);border-radius:19px;padding:16px;margin-bottom:15px}.claim-code{border:1px solid #c9bfad;border-radius:13px;padding:18px}.claim-code small{font-size:7px;letter-spacing:1.5px}.claim-code strong{display:block;font-family:"Playfair Display",serif;font-size:27px;margin:9px 0 14px;letter-spacing:1px}.claim-code .barcode{position:static;width:100%;height:37px}.claim-code span{display:block;font-size:8px;margin-top:12px;color:#716b62}.text-btn{border:0;background:none;color:#999da6;font-size:11px;margin-top:15px}.agent-screen{background:var(--bg)}.agent-body{padding:56px 24px}.agent-body h1{font-family:"Playfair Display",serif;font-size:44px;line-height:.91;letter-spacing:-2px;margin:9px 0 15px}.agent-body>p{font-size:12px;color:#858994;line-height:1.5}.agent-form{margin-top:27px;border:1px solid #292c32;background:#0d0f13;border-radius:22px;padding:20px}.agent-form input{width:100%;height:50px;border:1px solid #34373f;background:#090b0e;color:#fff;border-radius:14px;padding:0 12px;outline:0;margin-bottom:17px;font-size:11px}
 @media(min-width:700px){body{padding:24px}.app-shell{border-radius:28px;box-shadow:0 30px 100px #000;border:1px solid #252830;min-height:calc(100vh - 48px)}.bottom-nav{bottom:24px;border-radius:0 0 28px 28px}.screen{min-height:calc(100vh - 48px)}}
+
+/* Login offer rolling animation */
+.offer-ticker{
+  width:100%;
+  overflow:hidden;
+  border-top:1px solid #24272d;
+  border-bottom:1px solid #24272d;
+  background:#090b0e;
+  height:42px;
+  display:flex;
+  align-items:center;
+  position:relative;
+  margin-bottom:18px;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 7%,#000 93%,transparent 100%);
+  mask-image:linear-gradient(90deg,transparent 0,#000 7%,#000 93%,transparent 100%);
+}
+.ticker-track{
+  display:flex;
+  align-items:center;
+  width:max-content;
+  white-space:nowrap;
+  animation:c4uTicker 24s linear infinite;
+  will-change:transform;
+}
+.ticker-track span{
+  color:#cfd1d6;
+  font-size:8px;
+  font-weight:700;
+  letter-spacing:1.45px;
+  padding:0 18px;
+}
+.ticker-track span:first-child{color:#e66c84}
+.ticker-track i{
+  color:#d1b15b;
+  font-style:normal;
+  font-size:9px;
+}
+@keyframes c4uTicker{
+  from{transform:translate3d(0,0,0)}
+  to{transform:translate3d(-50%,0,0)}
+}
+@media (prefers-reduced-motion:reduce){
+  .ticker-track{animation:none}
+}
+
+/* Two-column premium "More offers for you" cards */
+.mini-list{
+  padding:0 18px 100px;
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:10px;
+}
+.offer-mini-card{
+  min-width:0;
+  padding:0;
+  border:1px solid #292c32;
+  background:#0d0f13;
+  color:#fff;
+  border-radius:17px;
+  overflow:hidden;
+  text-align:left;
+  cursor:pointer;
+  box-shadow:0 10px 30px #0004;
+}
+.mini-art{
+  height:92px;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  border-bottom:1px solid #ffffff16;
+}
+.mini-art:before{
+  content:"";
+  position:absolute;
+  width:105px;
+  height:105px;
+  border:1px solid #ffffff18;
+  border-radius:50%;
+  transform:rotate(18deg);
+}
+.mini-art:after{
+  content:"";
+  position:absolute;
+  width:150px;
+  height:45px;
+  border:1px solid #ffffff12;
+  border-radius:50%;
+  transform:rotate(-22deg);
+}
+.mini-art span{
+  position:relative;
+  z-index:2;
+  width:47px;
+  height:47px;
+  border:1px solid #ffffff42;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  font-family:"Playfair Display",serif;
+  font-size:14px;
+  letter-spacing:.5px;
+}
+.mini-art small{
+  position:absolute;
+  z-index:2;
+  left:10px;
+  top:9px;
+  font-size:6px;
+  letter-spacing:1.2px;
+  color:#d1d3d7;
+}
+.offer-mini-card.wine .mini-art{background:radial-gradient(circle at 70% 20%,#6b2337,#170d13 70%,#07080a)}
+.offer-mini-card.navy .mini-art{background:radial-gradient(circle at 75% 15%,#315071,#080e18 70%,#05070a)}
+.offer-mini-card.violet .mini-art{background:radial-gradient(circle at 72% 20%,#6f43aa,#171023 70%,#07080a)}
+.offer-mini-card.teal .mini-art{background:radial-gradient(circle at 70% 20%,#197f7c,#071717 70%,#050708)}
+.mini-card-body{
+  min-height:106px;
+  padding:11px 11px 9px;
+  position:relative;
+}
+.mini-card-body>b{
+  display:block;
+  font-size:10px;
+  line-height:1.15;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.mini-card-body>span{
+  display:block;
+  color:#7f838d;
+  font-size:7px;
+  margin-top:5px;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.mini-card-body>strong{
+  display:block;
+  margin-top:11px;
+  color:#f0d7d7;
+  font-family:"Playfair Display",serif;
+  font-size:24px;
+  line-height:.85;
+}
+.mini-card-body>strong small{
+  font-family:"DM Sans",sans-serif;
+  font-size:6px;
+  letter-spacing:1.2px;
+  color:#858994;
+}
+.mini-card-footer{
+  height:35px;
+  border-top:1px solid #252830;
+  padding:0 11px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  color:#aeb1b8;
+}
+.mini-card-footer span{
+  font-size:6px;
+  font-weight:700;
+  letter-spacing:1px;
+}
+.mini-card-footer b{
+  font-size:16px;
+  font-weight:400;
+}
+@media(max-width:350px){
+  .mini-list{grid-template-columns:1fr}
+}
+
+/* Local merchant image assets */
+.voucher-art .merchant-image{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  z-index:0;
+}
+.voucher-art .merchant-image + .art-glow{
+  z-index:1;
+  background:linear-gradient(180deg,#0001 0%,#0008 100%);
+}
+.voucher-art .art-orbit,
+.voucher-art .merchant-symbol,
+.voucher-art .merchant-copy,
+.voucher-art .art-corner{
+  z-index:2;
+}
+.voucher-art .merchant-image + .art-glow + .art-orbit{z-index:2}
+.voucher-art .merchant-copy{z-index:3}
+.voucher-art .merchant-symbol{z-index:3}
+.voucher-art .art-corner{z-index:3}
+.voucher-art.no-image .merchant-image{display:none!important}
+
+.mini-art .merchant-image{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  z-index:0;
+}
+.mini-art .merchant-image + span,
+.mini-art .merchant-image + span + small{
+  z-index:2;
+}
+.mini-art.no-image .merchant-image{display:none!important}

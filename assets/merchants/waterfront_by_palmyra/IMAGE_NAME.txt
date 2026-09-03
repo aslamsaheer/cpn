@@ -1,0 +1,16 @@
+coupon4u image placeholder
+
+Merchant: WATERFRONT BY PALMYRA
+Expected image filename: cover.jpg
+
+Rename your merchant image to exactly:
+cover.jpg
+
+Place it in this folder:
+assets/merchants/waterfront_by_palmyra/
+
+Recommended:
+- JPG or PNG
+- Landscape image
+- At least 1200 x 800 px
+- Keep the main subject/logo reasonably centered

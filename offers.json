@@ -5,7 +5,8 @@
     "rating": "4.4",
     "reviews": "1,899",
     "offer": "10% OFF",
-    "tag": "FINE DINING"
+    "tag": "FINE DINING",
+    "image": "assets/merchants/supreme_uppercrust/cover.jpg"
   },
   {
     "name": "SULAIMANI LAND'S END",
@@ -13,7 +14,8 @@
     "rating": "4.3",
     "reviews": "650",
     "offer": "5% OFF",
-    "tag": "SEA VIEW DINING"
+    "tag": "SEA VIEW DINING",
+    "image": "assets/merchants/sulaimani_land_s_end/cover.jpg"
   },
   {
     "name": "Le Delice",
@@ -21,7 +23,8 @@
     "rating": "4.2",
     "reviews": "1,556",
     "offer": "10% OFF",
-    "tag": "LOCAL FAVOURITE"
+    "tag": "LOCAL FAVOURITE",
+    "image": "assets/merchants/le_delice/cover.jpg"
   },
   {
     "name": "Meen by Chef Pillai",
@@ -29,7 +32,8 @@
     "rating": "4.2",
     "reviews": "1,155",
     "offer": "5% OFF",
-    "tag": "KERALA CUISINE"
+    "tag": "KERALA CUISINE",
+    "image": "assets/merchants/meen_by_chef_pillai/cover.jpg"
   },
   {
     "name": "Ramees Restaurant",
@@ -37,7 +41,8 @@
     "rating": "4.2",
     "reviews": "11,575",
     "offer": "10% OFF",
-    "tag": "SOUTH INDIAN"
+    "tag": "SOUTH INDIAN",
+    "image": "assets/merchants/ramees_restaurant/cover.jpg"
   },
   {
     "name": "Javees Cinema Restaurant",
@@ -45,7 +50,8 @@
     "rating": "4.7",
     "reviews": "53",
     "offer": "5% OFF",
-    "tag": "CINEMA DINING"
+    "tag": "CINEMA DINING",
+    "image": "assets/merchants/javees_cinema_restaurant/cover.jpg"
   },
   {
     "name": "Chef Stop",
@@ -53,7 +59,8 @@
     "rating": "4.0",
     "reviews": "789",
     "offer": "10% OFF",
-    "tag": "KERALA FUSION"
+    "tag": "KERALA FUSION",
+    "image": "assets/merchants/chef_stop/cover.jpg"
   },
   {
     "name": "Wok & Grill",
@@ -61,7 +68,8 @@
     "rating": "4.0",
     "reviews": "2,693",
     "offer": "5% OFF",
-    "tag": "ASIAN DINING"
+    "tag": "ASIAN DINING",
+    "image": "assets/merchants/wok_grill/cover.jpg"
   },
   {
     "name": "Black Gold Restaurant",
@@ -69,7 +77,8 @@
     "rating": "4.3",
     "reviews": "15",
     "offer": "10% OFF",
-    "tag": "FINE DINING"
+    "tag": "FINE DINING",
+    "image": "assets/merchants/black_gold_restaurant/cover.jpg"
   },
   {
     "name": "Sree Ayyappa Punjabi Food & Andhra Meals",
@@ -77,7 +86,8 @@
     "rating": "4.4",
     "reviews": "1,023",
     "offer": "5% OFF",
-    "tag": "VEGETARIAN"
+    "tag": "VEGETARIAN",
+    "image": "assets/merchants/sree_ayyappa_punjabi_food_andhra_meals/cover.jpg"
   },
   {
     "name": "The Leela Ashtamudi",
@@ -85,7 +95,8 @@
     "rating": "4.4",
     "reviews": "7,500",
     "offer": "10% OFF",
-    "tag": "BACKWATER LUXURY"
+    "tag": "BACKWATER LUXURY",
+    "image": "assets/merchants/the_leela_ashtamudi/cover.jpg"
   },
   {
     "name": "The Quilon Beach Hotel",
@@ -93,7 +104,8 @@
     "rating": "4.2",
     "reviews": "5,719",
     "offer": "5% OFF",
-    "tag": "BEACHSIDE STAY"
+    "tag": "BEACHSIDE STAY",
+    "image": "assets/merchants/the_quilon_beach_hotel/cover.jpg"
   },
   {
     "name": "Dfort Hotel Kollam",
@@ -101,7 +113,8 @@
     "rating": "4.4",
     "reviews": "2,678",
     "offer": "10% OFF",
-    "tag": "CITY STAY"
+    "tag": "CITY STAY",
+    "image": "assets/merchants/dfort_hotel_kollam/cover.jpg"
   },
   {
     "name": "Club Mahindra Ashtamudi",
@@ -109,7 +122,8 @@
     "rating": "4.3",
     "reviews": "6,578",
     "offer": "5% OFF",
-    "tag": "LAKE RESORT"
+    "tag": "LAKE RESORT",
+    "image": "assets/merchants/club_mahindra_ashtamudi/cover.jpg"
   },
   {
     "name": "Samiira on Ashtamudi Lake",
@@ -117,7 +131,8 @@
     "rating": "4.3",
     "reviews": "327",
     "offer": "10% OFF",
-    "tag": "LAKESIDE ESCAPE"
+    "tag": "LAKESIDE ESCAPE",
+    "image": "assets/merchants/samiira_on_ashtamudi_lake/cover.jpg"
   },
   {
     "name": "WATERFRONT BY PALMYRA",
@@ -125,7 +140,8 @@
     "rating": "4.6",
     "reviews": "429",
     "offer": "5% OFF",
-    "tag": "LAKESIDE RETREAT"
+    "tag": "LAKESIDE RETREAT",
+    "image": "assets/merchants/waterfront_by_palmyra/cover.jpg"
   },
   {
     "name": "HOTEL ALLSEASON",
@@ -133,7 +149,8 @@
     "rating": "4.7",
     "reviews": "1,000+",
     "offer": "10% OFF",
-    "tag": "LAKEFRONT HOTEL"
+    "tag": "LAKEFRONT HOTEL",
+    "image": "assets/merchants/hotel_allseason/cover.jpg"
   },
   {
     "name": "Chandra Inn",
@@ -141,7 +158,8 @@
     "rating": "4.3",
     "reviews": "661",
     "offer": "5% OFF",
-    "tag": "CITY HOTEL"
+    "tag": "CITY HOTEL",
+    "image": "assets/merchants/chandra_inn/cover.jpg"
   },
   {
     "name": "Ashtamudi Villas",
@@ -149,7 +167,8 @@
     "rating": "4.5",
     "reviews": "342",
     "offer": "10% OFF",
-    "tag": "LAKE VILLAS"
+    "tag": "LAKE VILLAS",
+    "image": "assets/merchants/ashtamudi_villas/cover.jpg"
   },
   {
     "name": "SR Residency",
@@ -157,7 +176,8 @@
     "rating": "4.4",
     "reviews": "132",
     "offer": "5% OFF",
-    "tag": "SMART STAY"
+    "tag": "SMART STAY",
+    "image": "assets/merchants/sr_residency/cover.jpg"
   },
   {
     "name": "Jolly Silks - Kollam",
@@ -165,7 +185,8 @@
     "rating": "4.7",
     "reviews": "13,639",
     "offer": "15% OFF",
-    "tag": "FASHION"
+    "tag": "FASHION",
+    "image": "assets/merchants/jolly_silks_kollam/cover.jpg"
   },
   {
     "name": "Pulimoottil Silks",
@@ -173,7 +194,8 @@
     "rating": "4.5",
     "reviews": "10,536",
     "offer": "15% OFF",
-    "tag": "SILKS & ETHNIC WEAR"
+    "tag": "SILKS & ETHNIC WEAR",
+    "image": "assets/merchants/pulimoottil_silks/cover.jpg"
   },
   {
     "name": "Style Union - Kollam",
@@ -181,7 +203,8 @@
     "rating": "4.8",
     "reviews": "8,448",
     "offer": "15% OFF",
-    "tag": "FASHION"
+    "tag": "FASHION",
+    "image": "assets/merchants/style_union_kollam/cover.jpg"
   },
   {
     "name": "Fashion Factory",
@@ -189,7 +212,8 @@
     "rating": "4.6",
     "reviews": "1,786",
     "offer": "15% OFF",
-    "tag": "FAMILY FASHION"
+    "tag": "FAMILY FASHION",
+    "image": "assets/merchants/fashion_factory/cover.jpg"
   },
   {
     "name": "Blossom Exclusive Store Kollam",
@@ -197,7 +221,8 @@
     "rating": "4.9",
     "reviews": "1,160",
     "offer": "15% OFF",
-    "tag": "WOMEN'S FASHION"
+    "tag": "WOMEN'S FASHION",
+    "image": "assets/merchants/blossom_exclusive_store_kollam/cover.jpg"
   },
   {
     "name": "Syzygy Ecosports",
@@ -205,7 +230,8 @@
     "rating": "4.8",
     "reviews": "470",
     "offer": "10% OFF",
-    "tag": "KAYAKING"
+    "tag": "KAYAKING",
+    "image": "assets/merchants/syzygy_ecosports/cover.jpg"
   },
   {
     "name": "Kayabay Adventure",
@@ -213,7 +239,8 @@
     "rating": "4.9",
     "reviews": "346",
     "offer": "10% OFF",
-    "tag": "KAYAKING"
+    "tag": "KAYAKING",
+    "image": "assets/merchants/kayabay_adventure/cover.jpg"
   },
   {
     "name": "Mangrove Dreams Adventure Water Sports",
@@ -221,7 +248,8 @@
     "rating": "4.9",
     "reviews": "2,235",
     "offer": "10% OFF",
-    "tag": "WATER SPORTS"
+    "tag": "WATER SPORTS",
+    "image": "assets/merchants/mangrove_dreams_adventure_water_sports/cover.jpg"
   },
   {
     "name": "Mangrove Wonders Kayaking",
@@ -229,7 +257,8 @@
     "rating": "4.9",
     "reviews": "1,283",
     "offer": "10% OFF",
-    "tag": "KAYAKING"
+    "tag": "KAYAKING",
+    "image": "assets/merchants/mangrove_wonders_kayaking/cover.jpg"
   },
   {
     "name": "Kollam Dream House Boat",
@@ -237,7 +266,8 @@
     "rating": "4.9",
     "reviews": "999",
     "offer": "10% OFF",
-    "tag": "HOUSEBOAT"
+    "tag": "HOUSEBOAT",
+    "image": "assets/merchants/kollam_dream_house_boat/cover.jpg"
   },
   {
     "name": "Dream Cruise Houseboats",
@@ -245,7 +275,8 @@
     "rating": "4.9",
     "reviews": "147",
     "offer": "10% OFF",
-    "tag": "HOUSEBOAT"
+    "tag": "HOUSEBOAT",
+    "image": "assets/merchants/dream_cruise_houseboats/cover.jpg"
   },
   {
     "name": "Kollam Houseboats Ashtamudi Lake Tours",
@@ -253,7 +284,8 @@
     "rating": "4.6",
     "reviews": "327",
     "offer": "10% OFF",
-    "tag": "BOAT TOUR"
+    "tag": "BOAT TOUR",
+    "image": "assets/merchants/kollam_houseboats_ashtamudi_lake_tours/cover.jpg"
   },
   {
     "name": "Adventure Park, Kollam",
@@ -261,6 +293,7 @@
     "rating": "4.1",
     "reviews": "7,851",
     "offer": "10% OFF",
-    "tag": "ADVENTURE"
+    "tag": "ADVENTURE",
+    "image": "assets/merchants/adventure_park_kollam/cover.jpg"
   }
 ]

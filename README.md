@@ -1,4 +1,4 @@
-# coupon4u v0.8.0 — Premium Ticket Voucher UI
+# coupon4u v0.8.3 — Premium Ticket Voucher UI
 
 A mobile-first coupon marketplace redesign based on the supplied visual reference.
 
@@ -10,6 +10,23 @@ A mobile-first coupon marketplace redesign based on the supplied visual referenc
 - Existing Kollam restaurant/hotel/shop/activity catalog retained
 - No external merchant image URLs
 - LocalStorage for saved and claimed offers
-- Version shown as v0.8.0
+- Version shown as v0.8.3
 
 Open `index.html` in a browser. For fetch() to load `offers.json`, use a small local web server rather than `file://`.
+
+
+## Adding merchant images
+
+Each merchant has its own folder under `assets/merchants/`.
+
+Inside every merchant folder you will find `IMAGE_NAME.txt`.
+It tells you the exact filename expected.
+
+For the current setup, rename the image to `cover.jpg` and place it beside
+`IMAGE_NAME.txt`. The app already links to that path in `offers.json`.
+
+Example:
+`assets/merchants/supreme_uppercrust/cover.jpg`
+
+You can replace `cover.jpg` with a PNG only if you also update that merchant's
+`image` path in `offers.json`.
