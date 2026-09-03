@@ -584,3 +584,19 @@
 .offer-mini-card .mini-redeem span{font-size:8px !important}
 .offer-mini-card .mini-redeem b{font-size:17px !important}
 @media(max-width:350px){.offer-mini-card{height:286px !important}}
+
+/* v1.0.0 — 24-hour mobile redemption pass */
+.pass-timer{display:inline-flex;align-items:center;gap:4px;margin-top:8px;padding:4px 7px;border:1px solid #4a3b23;border-radius:999px;background:#17130c;color:#e5c56a;font-size:8px;font-weight:800;letter-spacing:.6px;font-variant-numeric:tabular-nums;box-shadow:0 4px 16px #0005}
+.pass-timer span{font-size:9px}.pass-timer.expired{color:#e68181;border-color:#5b292f;background:#1a0d10}
+.voucher-content{padding-bottom:15px}.voucher-card .voucher-content::after{bottom:3px}
+/* Keep the ticket clean: no merchant coupon IDs or barcodes on offer cards. */
+.claim-voucher{background:linear-gradient(145deg,#f8f5ec,#e9e3d6);border:1px solid #bdb5a5;color:#171515;border-radius:20px;padding:13px;margin-bottom:15px;box-shadow:0 18px 45px #0006}
+.claim-pass-card{border:1px solid #c5bdad;border-radius:16px;padding:18px 14px 15px;background:#f8f5ec;position:relative;overflow:hidden}
+.claim-pass-card:before{content:"";position:absolute;inset:7px;border:1px dashed #c8c0b2;border-radius:11px;pointer-events:none}
+.claim-pass-label{position:relative;font-size:7px;letter-spacing:1.5px;color:#8a8378;font-weight:800}
+.claim-pass-code{position:relative;font-family:"Playfair Display",serif;font-size:27px;letter-spacing:1.5px;margin:9px 0 13px;color:#181717}
+.claim-expiry-row{position:relative;border-top:1px solid #d5cfc2;border-bottom:1px solid #d5cfc2;padding:9px 2px;display:flex;align-items:center;justify-content:space-between}
+.claim-expiry-row span{font-size:7px;letter-spacing:1.3px;color:#8a8378;font-weight:800}.claim-expiry-row strong{font-size:12px;font-variant-numeric:tabular-nums;color:#8f1531}
+.qr-code{position:relative;width:176px;height:176px;margin:16px auto 9px;background:#f8f5ec;display:grid;place-items:center}
+.qr-code img{display:block;width:176px!important;height:176px!important;image-rendering:pixelated}
+.qr-hint{position:relative;display:block;color:#777066;font-size:7px;letter-spacing:.7px}

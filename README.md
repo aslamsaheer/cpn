@@ -1,44 +1,16 @@
-# coupon4u v0.9.1 — Premium Ticket Voucher UI
+# coupon4u v1.0.0
 
-A mobile-first coupon marketplace redesign based on the supplied visual reference.
+Premium Kerala coupon marketplace demo.
 
-## Highlights
-- Premium digital-ticket voucher cards with merchant artwork zones
-- Cream voucher paper, perforated edges, barcode and redeem strip
-- Dark CRED-inspired shell with richer editorial typography
-- Home, Saved, My Offers, More, Detail and Claimed flows
-- Existing Kollam restaurant/hotel/shop/activity catalog retained
-- No external merchant image URLs
-- LocalStorage for saved and claimed offers
-- Version shown as v0.9.1
+## Redemption pass
+- Customer logs in with a unique 10-digit mobile number.
+- A single pass code is generated for that mobile number and remains valid for 24 hours.
+- A live countdown appears at the top-left of the home screen.
+- Offer cards contain no coupon IDs and no barcodes.
+- Redeeming any offer uses the active 24-hour pass.
+- The redemption screen shows the pass code, live expiry countdown, and a QR code containing that pass code.
 
-Open `index.html` in a browser. For fetch() to load `offers.json`, use a small local web server rather than `file://`.
+## Images
+Merchant photos are loaded from `assets/merchants/<slug>/cover.jpg`. If a photo is missing, the matching SVG fallback is used automatically.
 
-
-## Adding merchant images
-
-Each merchant has its own folder under `assets/merchants/`.
-
-Inside every merchant folder you will find `IMAGE_NAME.txt`.
-It tells you the exact filename expected.
-
-For the current setup, rename the image to `cover.jpg` and place it beside
-`IMAGE_NAME.txt`. The app already links to that path in `offers.json`.
-
-Example:
-`assets/merchants/supreme_uppercrust/cover.jpg`
-
-You can replace `cover.jpg` with a PNG only if you also update that merchant's
-`image` path in `offers.json`.
-
-
-## Ratings
-Merchant ratings are displayed as a compact star badge on the voucher artwork.
-The catalog stores the rating and review count with `ratingSource: Google`.
-
-
-## v0.9.1 asset cleanup
-
-Removed the old generic SVG artwork (`adventure.svg`, `boat.svg`, `fashion.svg`,
-`hotel.svg`, `kayak.svg`, `restaurant.svg`, `sea.svg`). Merchant folders under
-`assets/merchants/` remain the only source for merchant card images.
+> This version stores the pass locally in the browser for the frontend demo. A production deployment should generate and validate the 24-hour pass server-side (for example with Supabase) so the same mobile number is recognized across devices.
